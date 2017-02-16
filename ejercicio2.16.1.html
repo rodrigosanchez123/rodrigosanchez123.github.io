@@ -19,8 +19,11 @@ contexto.fillStyle= "red";
 contexto.fillRect(30,30,50,50);
 var miCanvas1= document.getElementById("miCanvas1");
 var contexto1= miCanvas1.getContext("2d");
-contexto1.fillSytle= "blue";
-contexto1.fillRect(300,30,50,25);
+var my_gradient=ctx.createLinearGradient(0,0,0,170);
+my_gradient.addColorStop(0,"blue");
+my_gradient.addColorStop(1,"yellow");
+contexto1.fillSytle= my_gradient;
+contexto1.fillRect(300,30,50,50);
 </script>
 </body>
 </html>
