@@ -6,21 +6,19 @@
 </head>
 <body>
 <h1>Ejercicio 2.16.1</h1>
-<canvas id="miCanvas" width="280" height="100" style="border:1px solid #d3d3d3;">
-&iexcl;No funciona!
-</canvas>
 <canvas id="myCanvas" width="280" height="100" style="border:1px solid #d3d3d3;">
 &iexcl;No funciona!
 </canvas>
 <script>
-var miCanvas1= document.getElementById("miCanvas");
-var contexto= miCanvas1.getContext("2d");
-contexto.fillStyle= "red";
-contexto.fillRect(30,30,50,50);
-var myCanvas2= document.getElementById("myCanvas");
-var contexto2= myCanvas2.getContext("2d");
-contexto2.fillSytle= "#000080";
-contexto2.fillRect(200,30,50,50);
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(30, 20, 50, 50);
+
+var c1 = document.getElementById("myCanvas");
+var ctx1 = c1.getContext("2d");
+ctx1.fillStyle = "blue";
+ctx1.fillRect(300, 20, 50, 50);
 </script>
 </body>
 </html>
