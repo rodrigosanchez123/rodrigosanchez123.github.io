@@ -20,8 +20,11 @@ personaje.faces.push( new THREE.Face3( 2, 3, 4) );
 personaje.computeBoundingSphere();
 personaje.computeFaceNormals();
 
-var material= new THREE.MeshNormalMaterial();
+var material = new THREE.MeshNormalMaterial();
+
 var malla = new THREE.Mesh( personaje, material );
+malla.rotateX(Math.PI/4);
+
 
 var escena = new THREE.Scene();
 escena.add( malla );
