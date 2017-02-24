@@ -12,7 +12,7 @@ personaje.faces.push( new THREE.Face3( 1, 2, 4 ) );
 personaje.faces.push( new THREE.Face3( 2, 3, 4 ) );
 personaje.faces.push( new THREE.Face3( 3, 0, 5 ) );
 //personaje.faces.push( new THREE.Face3( 0, 1, 5 ) );
-//personaje.faces.push( new THREE.Face3( 1, 2, 5 ) );
+personaje.faces.push( new THREE.Face3( 1, 2, 5 ) );
 //personaje.faces.push( new THREE.Face3( 2, 3, 5 ) );
 
 personaje.computeBoundingSphere();
