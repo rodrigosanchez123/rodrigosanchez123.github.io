@@ -12,10 +12,10 @@ personaje.faces.push( new THREE.Face3( 3, 0, 4 ) );
 personaje.faces.push( new THREE.Face3( 0, 1, 4 ) );
 personaje.faces.push( new THREE.Face3( 1, 2, 4 ) );
 personaje.faces.push( new THREE.Face3( 2, 3, 4 ) );
-personaje.faces.push( new THREE.Face3( 3, 0, 5) );
-personaje.faces.push( new THREE.Face3( 0, 1, 5) );
-personaje.faces.push( new THREE.Face3( 1, 2, 5) );
-personaje.faces.push( new THREE.Face3( 2, 3, 5) );
+//personaje.faces.push( new THREE.Face3( 3, 0, 5 ) );
+personaje.faces.push( new THREE.Face3( 0, 1, 5 ) );
+//personaje.faces.push( new THREE.Face3( 1, 2, 5 ) );
+//personaje.faces.push( new THREE.Face3( 2, 3, 5 ) );
 
 personaje.computeBoundingSphere();
 personaje.computeFaceNormals();
@@ -23,7 +23,7 @@ personaje.computeFaceNormals();
 var material = new THREE.MeshNormalMaterial();
 
 var malla = new THREE.Mesh( personaje, material );
-malla.rotateX(Math.PI/8);
+//malla.rotateX(Math.PI/8);
 
 
 var escena = new THREE.Scene();
