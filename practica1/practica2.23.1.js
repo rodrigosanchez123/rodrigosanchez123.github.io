@@ -23,7 +23,7 @@ personaje.computeFaceNormals();
 var material = new THREE.MeshNormalMaterial();
 
 var malla = new THREE.Mesh( personaje, material );
-malla.rotateX(Math.PI3/4);
+
 
 
 var escena = new THREE.Scene();
