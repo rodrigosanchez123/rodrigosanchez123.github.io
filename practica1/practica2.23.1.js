@@ -22,6 +22,7 @@ var material = new THREE.MeshNormalMaterial();
 
 var malla = new THREE.Mesh( personaje, material );
 malla.rotateX(Math.PI/4);
+malla.rotateZ(Math.PI/4);
 
 
 var escena = new THREE.Scene();
