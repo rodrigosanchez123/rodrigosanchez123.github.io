@@ -1,5 +1,5 @@
 var forma = new THREE.Geometry();
-forma.vertices.push( new THREE.Vector3(0,0,1)); // Vértice 0
+forma.vertices.push( new THREE.Vector3(1,0,1)); // Vértice 0
 forma.vertices.push( new THREE.Vector3(1,0,-1)); // Vértice 1
 forma.vertices.push( new THREE.Vector3(-1,0,-1)); // Vértice 2
 forma.vertices.push( new THREE.Vector3(-1,0,1)); // Vértice 3
@@ -19,7 +19,7 @@ forma.computeFaceNormals();
 var material = new THREE.MeshNormalMaterial();
 
 var malla = new THREE.Mesh( forma, material );
-malla.rotateX(Math.PI/4);
+
 
 
 var escena = new THREE.Scene();
