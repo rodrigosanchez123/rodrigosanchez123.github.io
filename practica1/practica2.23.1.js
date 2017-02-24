@@ -6,8 +6,6 @@ personaje.vertices.push( new THREE.Vector3(-1,  0,  1 ) ); // vertice 3
 personaje.vertices.push( new THREE.Vector3( 0,  1,  0 ) ); // vertice 4
 personaje.vertices.push( new THREE.Vector3( 0, -1,  0 ) ); // vertice 5
 
-//personaje.faces.push( new THREE.Face3( 3, 2, 1 ) ); // Cara 0
-//personaje.faces.push( new THREE.Face3( 3, 1, 0 ) ); // Cara 1
 //personaje.faces.push( new THREE.Face3( 3, 0, 4 ) );
 personaje.faces.push( new THREE.Face3( 0, 1, 4 ) );
 personaje.faces.push( new THREE.Face3( 1, 2, 4 ) );
@@ -23,7 +21,7 @@ personaje.computeFaceNormals();
 var material = new THREE.MeshNormalMaterial();
 
 var malla = new THREE.Mesh( personaje, material );
-malla.rotateX(Math.PI/4);
+//malla.rotateX(Math.PI/4);
 
 
 var escena = new THREE.Scene();
