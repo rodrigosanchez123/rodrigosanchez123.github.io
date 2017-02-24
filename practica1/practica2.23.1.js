@@ -37,10 +37,10 @@ document.body.appendChild( renderizador.domElement );
 renderizador.render( escena, camara );
 
 var render = function () {
-				requestAnimationFrame( render );
+				requestAnimationFrame( renderizador );
 				personaje.rotation.x += 0.1;
 				personaje.rotation.y += 0.1;
-				renderer.render(scene, camera);
+				renderizador.render(scene, camera);
 			};
 			
 			render();
