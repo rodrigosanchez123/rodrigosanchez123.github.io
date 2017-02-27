@@ -12,13 +12,13 @@ var scene = new THREE.Scene();
 
 			camera.position.z = 5;
 
-			var render = function () {
-				requestAnimationFrame( render );
+			//var render = function () {
+			//	requestAnimationFrame( render );
 
-				cube.rotation.x += 0.1;
+			//	cube.rotation.x += 0.1;
 				//cube.rotation.y += 0.1;
 
 				renderer.render(scene, camera);
-			};
+		//	};
 
-			render();
+		//	render();
