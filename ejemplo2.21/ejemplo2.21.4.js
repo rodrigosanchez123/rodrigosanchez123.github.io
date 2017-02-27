@@ -28,7 +28,7 @@ var render = function () {
 				requestAnimationFrame( render );
 
 				//malla.rotation.x += 0.1;
-				malla.rotation.y += 0.1;
+				malla.rotation.z += 0.1;
 
 				renderizador.render(escena, camara);
 			};
