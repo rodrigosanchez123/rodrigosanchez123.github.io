@@ -37,14 +37,14 @@ renderizador.setSize( window.innerHeight*.95,
 document.body.appendChild( renderizador.domElement );
 
 
-var render = function () {
-				requestAnimationFrame( render );
+//var render = function () {
+//				requestAnimationFrame( render );
 
-				malla.rotation.x += 0.1;
+//				malla.rotation.x += 0.1;
 				//malla.rotation.y += 0.1;
 
 				renderizador.render( escena, camara );
-			};
+//			};
 
-			render();
+//			render();
 
