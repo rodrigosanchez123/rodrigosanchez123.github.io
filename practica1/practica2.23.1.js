@@ -1,14 +1,14 @@
 var personaje= new THREE.Geometry();
-personaje.vertices.push( new THREE.Vector3( 1,  1,  0 ) ); // vertice 0
-personaje.vertices.push( new THREE.Vector3( 1,  -1, 0 ) ); // vertice 1
-personaje.vertices.push( new THREE.Vector3(-1,  -1, 0 ) ); // vertice 2
-personaje.vertices.push( new THREE.Vector3(-1,  1,  0 ) ); // vertice 3
-//personaje.vertices.push( new THREE.Vector3( 0,  1,  0 ) ); // vertice 4
-//personaje.vertices.push( new THREE.Vector3( 0, -1,  0 ) ); // vertice 5
+personaje.vertices.push( new THREE.Vector3( 1,  1, 0 ) ); // vertice 0
+personaje.vertices.push( new THREE.Vector3( 1, -1, 0 ) ); // vertice 1
+personaje.vertices.push( new THREE.Vector3(-1, -1, 0 ) ); // vertice 2
+personaje.vertices.push( new THREE.Vector3(-1,  1, 0 ) ); // vertice 3
+personaje.vertices.push( new THREE.Vector3(-2, 2, 1 ) ); // vertice 4
+personaje.vertices.push( new THREE.Vector3(-1, 2, 1 ) ); // vertice 5
 
-personaje.faces.push( new THREE.Face3( 0, 1, 4 ) );
-personaje.faces.push( new THREE.Face3( 1, 2, 2 ) );
-//personaje.faces.push( new THREE.Face3( 1, 2, 4 ) );
+personaje.faces.push( new THREE.Face3( 0, 1, 3 ) );
+personaje.faces.push( new THREE.Face3( 1, 2, 3 ) );
+personaje.faces.push( new THREE.Face3( 3, 4, 5 ) );
 //personaje.faces.push( new THREE.Face3( 2, 3, 4 ) );
 //personaje.faces.push( new THREE.Face3( 3, 0, 5 ) );
 //personaje.faces.push( new THREE.Face3( 0, 1, 5 ) );
