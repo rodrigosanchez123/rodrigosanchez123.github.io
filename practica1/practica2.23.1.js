@@ -43,7 +43,8 @@ personaje.computeFaceNormals();
 var material = new THREE.MeshNormalMaterial();
 var malla = new THREE.Mesh( personaje, material );
 
-//malla.rotateX(Math.PI/10);
+malla.rotateX(Math.PI*10/-16);
+malla.position.y=-2;
 
 var escena = new THREE.Scene();
 escena.add( malla );
@@ -58,13 +59,12 @@ renderizador.setSize( window.innerHeight*.95,
                       window.innerHeight*.95 );
 document.body.appendChild( renderizador.domElement );
 
-var render = function () {
-               requestAnimationFrame( render );
+//var render = function () {
+//               requestAnimationFrame( render );
             
 //                  malla.rotation.x += -0.1;
-                  malla.rotation.y += 0.1;
+//                  malla.rotation.y += 0.1;
                 renderizador.render( escena, camara );
-        };
+//        };
         
-     render();
-
+//     render();
