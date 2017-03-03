@@ -45,7 +45,7 @@ var malla = new THREE.Mesh( personaje, material );
 
 malla.rotateX(Math.PI*10/-16);
 malla.position.y=-2;
-
+malla.position.x=30;
 //El Monito
 var cabezageo=[];
 cabezageo.push( new THREE.Vector2(0.01,0.0));
