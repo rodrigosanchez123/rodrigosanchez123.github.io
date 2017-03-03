@@ -40,6 +40,7 @@ personaje.faces.push( new THREE.Face3(11,8,12)); // Cara 18
 personaje.computeBoundingSphere();
 personaje.computeFaceNormals();
 
+personaje.scale(5,5,5);
 var personajematerial = new THREE.MeshNormalMaterial();
 var malla = new THREE.Mesh( personaje, personajematerial );
 
