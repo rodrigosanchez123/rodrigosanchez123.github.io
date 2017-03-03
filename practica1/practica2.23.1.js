@@ -104,7 +104,7 @@ escena.add(monito);
 
 var camara = new THREE.PerspectiveCamera();
 //camara.position.y = 5;
-camara.position.z = -200;
+camara.position.z = -300;
 camara.lookAt(escena.position)
 
 var renderizador = new THREE.WebGLRenderer();
