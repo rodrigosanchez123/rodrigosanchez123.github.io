@@ -37,7 +37,7 @@ personaje.faces.push( new THREE.Face3(9,10,12)); // Cara 16
 personaje.faces.push( new THREE.Face3(10,11,12)); // Cara 17
 personaje.faces.push( new THREE.Face3(11,8,12)); // Cara 18
 
-personaje.scale(20,20,20);
+//personaje.scale(20,20,20);
 personaje.computeBoundingSphere();
 personaje.computeFaceNormals();
 
