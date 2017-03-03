@@ -37,7 +37,6 @@ personaje.faces.push( new THREE.Face3(9,10,12)); // Cara 16
 personaje.faces.push( new THREE.Face3(10,11,12)); // Cara 17
 personaje.faces.push( new THREE.Face3(11,8,12)); // Cara 18
 
-//personaje.scale(20,20,20);
 personaje.computeBoundingSphere();
 personaje.computeFaceNormals();
 
@@ -48,6 +47,7 @@ var malla = new THREE.Mesh( personaje, personajematerial );
 malla.rotateX(Math.PI*10/-16);
 malla.position.y=-2;
 malla.position.x=30;
+malla.scale(20,20,20);
 //El Monito
 var cabezageo=[];
 cabezageo.push( new THREE.Vector2(0.01,0.0));
