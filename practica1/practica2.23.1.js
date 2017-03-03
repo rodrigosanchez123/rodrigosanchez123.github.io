@@ -94,6 +94,7 @@ var material= new THREE.MeshNormalMaterial();
 
 var monito= new THREE.Mesh(monitoforma,material);
 monito.rotateY(Math.PI*7/8);
+monito.position.x=70;
 
 
 //El espacio
