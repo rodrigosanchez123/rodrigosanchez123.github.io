@@ -40,8 +40,8 @@ personaje.faces.push( new THREE.Face3(11,8,12)); // Cara 18
 personaje.computeBoundingSphere();
 personaje.computeFaceNormals();
 
-var material = new THREE.MeshNormalMaterial();
-var malla = new THREE.Mesh( personaje, material );
+var personajematerial = new THREE.MeshNormalMaterial();
+var malla = new THREE.Mesh( personaje, personajematerial );
 
 malla.rotateX(Math.PI*10/-16);
 malla.position.y=-2;
