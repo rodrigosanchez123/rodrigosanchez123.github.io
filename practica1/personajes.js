@@ -269,8 +269,8 @@ camara.position.z =500;
 camara.lookAt(escena.position)
 
 var renderizador = new THREE.WebGLRenderer();
-renderizador.setSize( window.innerHeight*.95, 
-                      window.innerHeight*.95 );
+renderizador.setSize( window.innerHeight, 
+                      window.innerHeight );
 document.body.appendChild( renderizador.domElement );
 
 //var render = function () {
