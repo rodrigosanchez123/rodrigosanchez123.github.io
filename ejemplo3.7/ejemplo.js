@@ -20,3 +20,14 @@ var esfera2 = new THREE.Mesh( nre THREE.SphereGeometry(1), new THREE.MeshNormalM
 
 esfera2.position.x= -5;
 esfera2.position.z= -10;
+
+var escena= new THREE.Scene();
+escena.add(esfera1);
+escena.add(esfera2);
+escena.add(cubo);
+
+var renderizador= new THREE.WebGLRenderer();
+renderizador.setSize(window.innerwidth, window.innerheight);
+
+document.body.appendChild(renderizador.domElement);
+renderizador.render(escena,camara);
