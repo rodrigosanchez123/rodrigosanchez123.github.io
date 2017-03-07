@@ -4,7 +4,7 @@ var relacionAspecto= window.innerWidth / window.innerHeight;
 var planoCercano= 1;
 var planoLejano= 1000;
 
-var camara= new THREE.PerspectiveCamera(campoVision, ralacionAspecto, planoCercano, planoLejano);
+var camara= new THREE.PerspectiveCamera(campoVision, relacionAspecto, planoCercano, planoLejano);
 
 camara.position.z=15;
 
@@ -16,7 +16,7 @@ var esfera1= new THREE.Mesh( new THREE.SphereGeometry(1), new THREE.MeshNormalMa
 
 esfera1.position.x= 5;
 
-var esfera2 = new THREE.Mesh( nre THREE.SphereGeometry(1), new THREE.MeshNormalMaterial() );
+var esfera2 = new THREE.Mesh( new THREE.SphereGeometry(1), new THREE.MeshNormalMaterial() );
 
 esfera2.position.x= -5;
 esfera2.position.z= -10;
