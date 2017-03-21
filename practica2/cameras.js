@@ -82,7 +82,7 @@ escena.add(Piso);
 }  
 
 var camara= new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
-camara.position.set(0,-200,100);
+camara.position.set(100,-200,100);
 camara.lookAt(escena.position);
 
 //var camara= new THREE.OrthographicCamera();
