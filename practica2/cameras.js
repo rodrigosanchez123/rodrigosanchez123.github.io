@@ -93,7 +93,7 @@ camara.bottom=window.innerHeight/-2;
 camara.near=0.1;
 camara.far=1000;
 camara.updateProjectionMatrix();
-camara.position.set(50,-50,60);
+camara.position.set(-50,-50,60);
 camara.lookAt(escena.position);
 
 var renderizador= new THREE.WebGLRenderer();
