@@ -81,20 +81,20 @@ escena.add(Piso);
   }
 }  
 
-var camara= new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
-camara.position.set(-50,-150,100);
-camara.lookAt(escena.position);
-
-//var camara= new THREE.OrthographicCamera();
-//camara.left=window.innerWidth/-2;
-//camara.right=window.innerWidth/2;
-//camara.top=window.innerHeight/2;
-//camara.bottom=window.innerHeight/-2;
-//camara.near=0.1;
-//camara.far=1000;
-//camara.updateProjectionMatrix();
-//camara.position.set(0,-200,100);
+//var camara= new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+//camara.position.set(-50,-150,100);
 //camara.lookAt(escena.position);
+
+var camara= new THREE.OrthographicCamera();
+camara.left=window.innerWidth/-2;
+camara.right=window.innerWidth/2;
+camara.top=window.innerHeight/2;
+camara.bottom=window.innerHeight/-2;
+camara.near=0.1;
+camara.far=1000;
+camara.updateProjectionMatrix();
+camara.position.set(0,-100,50);
+camara.lookAt(escena.position);
 
 var renderizador= new THREE.WebGLRenderer();
 renderizador.setSize(window.innerWidth,window.innerHeight);
