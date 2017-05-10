@@ -1,18 +1,18 @@
 function setup(){
  THREE.ImageUtils.crossOrigin = '';
  var textura = THREE.ImageUtils.loadTexture('https:brick_diffuse.jpg');
- var material = new THREE.MeshLambertMaterial({map: textura});
+ var material = new THREE.MeshBasicMaterial({map: textura});
  var forma = new THREE.BoxGeometry(1,4,9);
  malla = new THREE.Mesh();
 
- var luzPuntual = new THREE.PointLight(0xFFFFFF);
- luzPuntual.position.x = 10;
- luzPuntual.position.y = 10;
- luzPuntual.position.z = 10;
+ //var luzPuntual = new THREE.PointLight(0xFFFFFF);
+ //luzPuntual.position.x = 10;
+ //luzPuntual.position.y = 10;
+ //luzPuntual.position.z = 10;
   
  escena = new THREE.Scene();
  escena.add(malla);
- escena.add(luzPuntual);
+ //escena.add(luzPuntual);
   
  camara = new THREE.PerspectiveCamera();
  camara.position.z = 10;
