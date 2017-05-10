@@ -1,11 +1,11 @@
 function setup(){
  THREE.ImageUtils.crossOrigin = '';
- var textura = THREE.ImageUtils.loadTexture('https:brick_diffuse.jpg');
+ var textura = THREE.ImageUtils.loadTexture('https:crate.gif');
  var material = new THREE.MeshLambertMaterial({map: textura});
- var forma = new THREE.BoxGeometry(1,4,3);
+ var forma = new THREE.BoxGeometry(1,1,1);
  malla = new THREE.Mesh();
 
- var luzPuntual = new THREE.PointLight('0xFFFFFF');
+ var luzPuntual = new THREE.PointLight(0xFFFFFF);
  luzPuntual.position.x = 10;
  luzPuntual.position.y = 10;
  luzPuntual.position.z = 10;
