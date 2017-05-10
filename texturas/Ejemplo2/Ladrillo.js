@@ -12,7 +12,7 @@ function setup(){
   
  escena = new THREE.Scene();
  escena.add(malla);
- //escena.add(luzPuntual);
+ escena.add(luzPuntual);
   
  camara = new THREE.PerspectiveCamera();
  camara.position.z = 10;
