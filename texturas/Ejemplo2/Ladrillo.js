@@ -1,6 +1,6 @@
 function setup(){
  THREE.ImageUtils.crossOrigin = '';
- var textura = THREE.ImageUtils.loadTexture('https:.gif');
+ var textura = THREE.ImageUtils.loadTexture('https:brick_diffuse.jpg');
  var material = new THREE.MeshLambertMaterial({map: textura});
  var forma = new THREE.BoxGeometry(1,1,1);
  malla = new THREE.Mesh();
@@ -22,14 +22,15 @@ function setup(){
  document.body.appendChild(renderer.domElement);
 }
 function loop(){
-  requestAnimationFrame(loop);
-  
-  malla.rotation.x += 0.01;
-  malla.rotation.y += 0.01;
-  
-  renderer.render(escena,camara);
+requestAnimationFrame(loop);
+
+malla.rotation.x += 0.01;
+malla.rotation.y += 0.01;
+
+renderer.render(escena,camara);
 }
 
 var camara, escena, renderer, malla;
 setup();
 loop();
+
