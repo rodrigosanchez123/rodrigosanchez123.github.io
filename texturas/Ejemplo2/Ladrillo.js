@@ -1,6 +1,6 @@
 function setup(){
  THREE.ImageUtils.crossOrigin = '';
- var textura = THREE.ImageUtils.loadTexture('https://rodrigosanchez123.github.io/texturas/Ejemplo2/brick_diffuse.jpg');
+ var textura = THREE.ImageUtils.loadTexture('https:crate.gif');
  var material = new THREE.MeshLambertMaterial({map: textura});
  var forma = new THREE.BoxGeometry(1,1,1);
  malla = new THREE.Mesh();
