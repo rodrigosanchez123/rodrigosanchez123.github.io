@@ -4,7 +4,7 @@ function setup(){
   var PlanoMaterial = new THREE.MeshBasicMaterial({map: planoimagen});
   var PlanoGeometria = new THREE.PlaneGeometry(50,70);
   plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
-  plano.rotateX(Math.PI/4);
+  plano.rotateX(Math.PI/2);
 
   escena = new THREE.Scene();
   escena.add(plano);
@@ -15,7 +15,7 @@ function setup(){
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
   document.body.appendChild(renderer.domElement);
-  //renderer.render(escena,camara);
+  renderer.render(escena,camara);
 }
 
 //function loop(){
