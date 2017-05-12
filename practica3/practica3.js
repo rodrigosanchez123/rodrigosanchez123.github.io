@@ -2,14 +2,14 @@ function setup(){
   THREE.ImageUtils.crossOrigin = '';
   var planoimagen = THREE.ImageUtils.loadTexture('https:Cragmaw.jpg');
   var PlanoMaterial = new THREE.MeshBasicMaterial({map: planoimagen});
-  var PlanoGeometria = new THREE.PlaneGeometry(100,100);
+  var PlanoGeometria = new THREE.PlaneGeometry(50,70);
   plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
 
   escena = new THREE.Scene();
   escena.add(plano);
   
   camara = new THREE.PerspectiveCamera();
-  camara.position.z = 10;
+  camara.position.z = 50;
   
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
