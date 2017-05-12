@@ -14,7 +14,18 @@ function setup(){
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
   document.body.appendChild(renderer.domElement);
-  renderer.render(escena,camara);
+  //renderer.render(escena,camara);
 }
+
+function loop(){
+requestAnimationFrame(loop);
+
+malla.rotation.x += 0.01;
+malla.rotation.y += 0.01;
+
+renderer.render(escena,camara);
+}
+
 var plano, escena, camara, renderer;
 setup();
+loop();
