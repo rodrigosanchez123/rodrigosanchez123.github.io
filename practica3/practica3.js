@@ -11,7 +11,6 @@ function setup(){
   
   camara = new THREE.PerspectiveCamera();
   camara.position.z = 50;
-   camara.position.x = 50;
   
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
