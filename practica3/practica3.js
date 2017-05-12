@@ -4,13 +4,14 @@ function setup(){
   var PlanoMaterial = new THREE.MeshBasicMaterial({map: planoimagen});
   var PlanoGeometria = new THREE.PlaneGeometry(50,70);
   plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
-  plano.rotateX(Math.PI/-4);
+  //plano.rotateX(Math.PI/-4);
 
   escena = new THREE.Scene();
   escena.add(plano);
   
   camara = new THREE.PerspectiveCamera();
   camara.position.z = 50;
+   camara.position.x = 50;
   
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
