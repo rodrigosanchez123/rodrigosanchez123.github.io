@@ -1,6 +1,6 @@
 function setup(){
   THREE.ImageUtils.crossOrigin = '';
-  var planoimagen = THREE.ImageUtils.loadTexture('Cragmaw.jpg');
+  var planoimagen = THREE.ImageUtils.loadTexture('https:Cragmaw.jpg');
   var PlanoMaterial = new THREE.MeshBasicMaterial({map: planoimagen});
   var PlanoGeometria = new THREE.PlaneGeometry(100,100);
   plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
