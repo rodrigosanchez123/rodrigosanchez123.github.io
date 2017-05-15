@@ -4,7 +4,7 @@
   var PlanoMaterial = new THREE.MeshBasicMaterial({map: planoimagen});
   var PlanoGeometria = new THREE.PlaneGeometry(50,70);
   var plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
-  plano.rotateX(Math.PI/3);
+  plano.rotateX(Math.PI/-3);
 
  var escena = new THREE.Scene();
   escena.add(plano);
