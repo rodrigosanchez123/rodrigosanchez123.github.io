@@ -1,22 +1,22 @@
-function setup(){
+//function setup(){
   THREE.ImageUtils.crossOrigin = '';
   var planoimagen = THREE.ImageUtils.loadTexture('https:Cragmaw.jpg');
   var PlanoMaterial = new THREE.MeshBasicMaterial({map: planoimagen});
   var PlanoGeometria = new THREE.PlaneGeometry(50,70);
-  plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
+  var plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
   plano.rotateX(Math.PI/3);
 
-  escena = new THREE.Scene();
+ var escena = new THREE.Scene();
   escena.add(plano);
   
-  camara = new THREE.PerspectiveCamera();
+ var camara = new THREE.PerspectiveCamera();
   camara.position.z = 50;
   
-  renderer = new THREE.WebGLRenderer();
+ var renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
   document.body.appendChild(renderer.domElement);
   renderer.render(escena,camara);
-}
+/}
 
 //function loop(){
 //requestAnimationFrame(loop);
@@ -27,6 +27,6 @@ function setup(){
 //renderer.render(escena,camara);
 //}
 
-var plano, escena, camara, renderer;
-setup();
+//var plano, escena, camara, renderer;
+//setup();
 //loop();
