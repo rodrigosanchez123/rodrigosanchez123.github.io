@@ -10,7 +10,7 @@ function setup(){
   escena.add(plano);
   
   camara = new THREE.PerspectiveCamera();
-  camara.position.z = 50;
+  camara.position.y = 50;
   camara.lookAt(escena.position);
   
   renderer = new THREE.WebGLRenderer();
