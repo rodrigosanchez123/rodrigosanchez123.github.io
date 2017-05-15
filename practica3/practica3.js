@@ -1,22 +1,23 @@
-//function setup(){
+function setup(){
   THREE.ImageUtils.crossOrigin = '';
   var planoimagen = THREE.ImageUtils.loadTexture('https:Cragmaw.jpg');
   var PlanoMaterial = new THREE.MeshBasicMaterial({map: planoimagen});
   var PlanoGeometria = new THREE.PlaneGeometry(50,70);
-  var plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
+  plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
   plano.rotateX(Math.PI/-3);
 
- var escena = new THREE.Scene();
+  escena = new THREE.Scene();
   escena.add(plano);
   
- var camara = new THREE.PerspectiveCamera();
+  camara = new THREE.PerspectiveCamera();
   camara.position.z = 50;
+  camara.lookAt(escena.position);
   
- var renderer = new THREE.WebGLRenderer();
+  renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
   document.body.appendChild(renderer.domElement);
   renderer.render(escena,camara);
-//}
+}
 
 //function loop(){
 //requestAnimationFrame(loop);
@@ -27,6 +28,6 @@
 //renderer.render(escena,camara);
 //}
 
-//var plano, escena, camara, renderer;
-//setup();
+var plano, escena, camara, renderer;
+setup();
 //loop();
