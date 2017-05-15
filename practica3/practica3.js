@@ -16,7 +16,7 @@
   renderer.setSize(window.innerWidth,window.innerHeight);
   document.body.appendChild(renderer.domElement);
   renderer.render(escena,camara);
-/}
+//}
 
 //function loop(){
 //requestAnimationFrame(loop);
