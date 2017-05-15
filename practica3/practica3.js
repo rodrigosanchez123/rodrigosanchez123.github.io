@@ -1,7 +1,7 @@
 function setup(){
-  THREE.ImageUtils.crossOrigin = '';
-  var planoimagen = THREE.ImageUtils.loadTexture('https:Cragmaw.jpg');
-  var PlanoMaterial = new THREE.MeshBasicMaterial({map: planoimagen});
+  //THREE.ImageUtils.crossOrigin = '';
+  //var planoimagen = THREE.ImageUtils.loadTexture('https:Cragmaw.jpg');
+  var PlanoMaterial = new THREE.MeshBasicMaterial({color: 0xFFFFFF});
   var PlanoGeometria = new THREE.PlaneGeometry(50,70);
   plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
   plano.rotateX(Math.PI/4);
