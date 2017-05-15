@@ -5,7 +5,6 @@ function setup(){
   var PlanoGeometria = new THREE.PlaneGeometry(50,70);
   plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
   //plano.rotateX(Math.PI/-3);
-  plano.rotation.x = 0.10;
   
   escena = new THREE.Scene();
   escena.add(plano);
