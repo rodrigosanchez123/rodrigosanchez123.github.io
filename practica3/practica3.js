@@ -4,30 +4,30 @@ function setup(){
   var PlanoMaterial = new THREE.MeshBasicMaterial({map: planoimagen});
   var PlanoGeometria = new THREE.PlaneGeometry(50,70);
   plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
-  plano.rotateX(Math.PI/-3);
+  //plano.rotateX(Math.PI/-3);
 
   escena = new THREE.Scene();
   escena.add(plano);
   
   camara = new THREE.PerspectiveCamera();
-  camara.position.x = 50;
+  camara.position.z = 50;
   camara.lookAt(escena.position);
   
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
   document.body.appendChild(renderer.domElement);
-  renderer.render(escena,camara);
+  //renderer.render(escena,camara);
 }
 
-//function loop(){
-//requestAnimationFrame(loop);
+function loop(){
+requestAnimationFrame(loop);
 
-//plano.rotation.x += 0.01;
-//plano.rotation.y += 0.01;
+plano.rotation.x += 0.01;
+plano.rotation.y += 0.01;
 
-//renderer.render(escena,camara);
-//}
+renderer.render(escena,camara);
+}
 
 var plano, escena, camara, renderer;
 setup();
-//loop();
+loop();
