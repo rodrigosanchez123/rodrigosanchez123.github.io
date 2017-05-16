@@ -2,7 +2,7 @@ function setup(){
   //THREE.ImageUtils.crossOrigin = '';
   //var planoimagen = new THREE.ImageUtils.loadTexture('https://rodrigosanchez123.github.io/practica3/Cragmaw.jpg');
   var texloader = new THREE.TextureLoader();
-  var tex=texloader.load("second.jpg");
+  var tex=texloader.load("Cragmaw.jpg");
   var PlanoMaterial = new THREE.MeshBasicMaterial({map:tex, side:THREE.DoubleSide});
   var PlanoGeometria = new THREE.PlaneGeometry(50,70);
   plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
