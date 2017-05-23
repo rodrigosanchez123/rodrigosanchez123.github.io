@@ -1,7 +1,7 @@
 function setup(){
-  THREE.ImageUtils.crossOrigin = '';
-  var planoimagen = THREE.ImageUtils.loadTexture('https:Cragmaw.jpg');
-  var PlanoMaterial = new THREE.MeshBasicMaterial({map:planoimagen, side:THREE.DoubleSide});
+  //THREE.ImageUtils.crossOrigin = '';
+  //var planoimagen = THREE.ImageUtils.loadTexture('https:Cragmaw.jpg');
+  var PlanoMaterial = new THREE.MeshBasicMaterial({side:THREE.DoubleSide});
   var PlanoGeometria = new THREE.PlaneGeometry(50,70);
   plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
   plano.rotateX(Math.PI/-4);
@@ -16,18 +16,18 @@ function setup(){
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
   document.body.appendChild(renderer.domElement);
-  //renderer.render(escena,camara);
+  renderer.render(escena,camara);
 }
 
-function loop(){
-requestAnimationFrame(loop);
+//function loop(){
+//requestAnimationFrame(loop);
 
-plano.rotation.x += 0.01;
-plano.rotation.y += 0.01;
+//plano.rotation.x += 0.01;
+//plano.rotation.y += 0.01;
 
-renderer.render(escena,camara);
-}
+//renderer.render(escena,camara);
+//}
 
 var plano, escena, camara, renderer;
 setup();
-loop();
+//loop();
