@@ -17,7 +17,7 @@ function setup(){
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
   
-  function loop()[
+  function loop(){
   var step = 0.01;
   
   cubo1.rotation.x += step;
