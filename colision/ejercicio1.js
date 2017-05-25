@@ -11,7 +11,7 @@ function setup(){
   escena = new THREE.Scene();
   escena.add(cubo1);
   escena.add(cubo2);
-  escens.add(camara);
+  escena.add(camara);
   
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
