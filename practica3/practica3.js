@@ -1,4 +1,9 @@
 function setup(){
+  
+  renderer = new THREE.WebGLRenderer();
+  renderer.setSize(window.innerWidth,window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+  renderer.render(escena,camara);
   THREE.ImageUtils.crossOrigin = '';
   var planoimagen = THREE.ImageUtils.loadTexture('https:Cragmaw.jpg',{},function(){renderer.render(escena);});
   var PlanoMaterial = new THREE.MeshBasicMaterial({map:planoimagen, side:THREE.DoubleSide});
