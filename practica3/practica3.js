@@ -1,10 +1,6 @@
-function setup(){
-  renderer = new THREE.WebGLRenderer();
-  renderer.setSize(window.innerWidth,window.innerHeight);
-  document.body.appendChild(renderer.domElement);
-  
+function setup(){ 
   THREE.ImageUtils.crossOrigin = '';
-  var planoimagen = THREE.ImageUtils.loadTexture('https:Cragmaw.jpg',{},function(){renderer.render(escena);});
+  var planoimagen = THREE.ImageUtils.loadTexture('https:Cragmaw.jpg',{},0020function(){renderer.render(escena);});
   var PlanoMaterial = new THREE.MeshBasicMaterial({map:planoimagen, side:THREE.DoubleSide});
   var PlanoGeometria = new THREE.BoxGeometry(50,70,10);
   plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
@@ -17,6 +13,9 @@ function setup(){
   camara.position.z = 50;
   camara.lookAt(escena.position);
   
+  renderer = new THREE.WebGLRenderer();
+  renderer.setSize(window.innerWidth,window.innerHeight);
+  document.body.appendChild(renderer.domElement);
   renderer.render(escena,camara);
 }
 
