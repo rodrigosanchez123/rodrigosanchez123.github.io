@@ -13,7 +13,13 @@ function setup(){
   plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
   plano.rotateX(Math.PI/-4);
        escena.add(plano);
-     });
+     },function ( xhr ) {
+		console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+	},
+	// Function called when download errors
+	function ( xhr ) {
+		console.log( 'An error happened' );
+	});
   
   camara = new THREE.PerspectiveCamera();
   camara.position.z = 50;
