@@ -1,12 +1,13 @@
 function setup(){ 
-  THREE.ImageUtils.crossOrigin = '';
-  var planoimagen = THREE.ImageUtils.loadTexture('https:Cragmaw.jpg');
+ // THREE.ImageUtils.crossOrigin = '';
+  //var planoimagen = THREE.ImageUtils.loadTexture('https:Cragmaw.jpg');
   
  escena = new THREE.Scene();
   var loader= new THREE.TextureLoader();
      loader.load('https:Cragmaw.jpg', function ( planoimagen ) {
+       var PlanoGeometria = new THREE.BoxGeometry(50,70,10);
     var PlanoMaterial = new THREE.MeshBasicMaterial({map:planoimagen, side:THREE.DoubleSide});
-    var PlanoGeometria = new THREE.BoxGeometry(50,70,10);
+    
   plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
   plano.rotateX(Math.PI/-4);
        escena.add(plano);
