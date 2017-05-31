@@ -14,6 +14,7 @@ function setup(){
      godzilla.load('https:godzilla-coversion.json',	function ( geometry, materials ) {
      	var material = new THREE.MeshBasicMaterial();
 		    var object = new THREE.Mesh( geometry, material );
+	     object.scale.set(5,5,5);
       escena.add( object );	});
  
   
