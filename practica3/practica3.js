@@ -3,8 +3,8 @@ function setup(){
   //var planoimagen = THREE.ImageUtils.loadTexture('https:Cragmaw.jpg');
  
  escena = new THREE.Scene();
- var group = new THREE.Group(); 
- escena.add(group);
+ //var group = new THREE.Group(); 
+ //escena.add(group);
   var loader= new THREE.TextureLoader();
      loader.load('https:Cragmaw.jpg', function ( planoimagen ) {
        var PlanoGeometria = new THREE.BoxGeometry(50,70,10);
@@ -12,7 +12,7 @@ function setup(){
     
   plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
   plano.rotateX(Math.PI/-4);
-       group.add(plano);
+       escena.add(plano);
      });
   
   camara = new THREE.PerspectiveCamera();
