@@ -7,11 +7,11 @@ iluminacion.position.z = 50;
 	escena.add(iluminacion);
     var loader= new THREE.TextureLoader();
      	loader.load('https:Cragmaw.jpg', function ( planoimagen ) {
-       	var PlanoGeometria = new THREE.BoxGeometry(50,70,10);
+       	var PlanoGeometria = new THREE.BoxGeometry(50,70,1);
     	var PlanoMaterial = new THREE.MeshBasicMaterial({map:planoimagen, side:THREE.DoubleSide});
     
   	plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
-  	plano.rotateX(Math.PI/-4);
+  	//plano.rotateX(Math.PI/-4);
         escena.add(plano);
      });
  
