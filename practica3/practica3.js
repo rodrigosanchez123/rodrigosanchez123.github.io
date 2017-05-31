@@ -9,6 +9,13 @@ function setup(){
   	plano.rotateX(Math.PI/-4);
         escena.add(plano);
      });
+ 
+ var godzilla = new THREE.JSONLoader();
+     godzilla.load('https:godzilla-coversion.js',	function ( geometry, materials ) {
+     	var material = materials[ 0 ];
+		    var object = new THREE.Mesh( geometry, material );
+      scene.add( object );	});
+ 
   
   camara = new THREE.PerspectiveCamera();
   camara.position.z = 50;
