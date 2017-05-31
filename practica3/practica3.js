@@ -1,6 +1,6 @@
 function setup(){ 
   THREE.ImageUtils.crossOrigin = '';
-  //var planoimagen = THREE.ImageUtils.loadTexture('https:Cragmaw.jpg');
+  var planoimagen = THREE.ImageUtils.loadTexture('https:Cragmaw.jpg');
   
  escena = new THREE.Scene();
   var loader= new THREE.TextureLoader();
