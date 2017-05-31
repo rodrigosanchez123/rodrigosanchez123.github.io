@@ -12,7 +12,7 @@ function setup(){
  
  var godzilla = new THREE.JSONLoader();
      godzilla.load('https:godzilla-coversion.json',	function ( geometry, materials ) {
-     	var material = materials[ 0 ];
+     	var material = new THREE.MeshBasicMaterial();
 		    var object = new THREE.Mesh( geometry, material );
       escena.add( object );	});
  
