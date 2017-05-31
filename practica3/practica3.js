@@ -30,7 +30,7 @@ function setup(){
 function loop(){
 requestAnimationFrame(loop);
 
-plano.rotation.x += 0.01;
+object.rotation.x += 0.01;
 //plano.rotation.y += 0.01;
 
 renderer.render(escena,camara);
