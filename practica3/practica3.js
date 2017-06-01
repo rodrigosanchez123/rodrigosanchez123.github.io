@@ -25,7 +25,6 @@ iluminacion.position.z = 10;
   
   camara = new THREE.PerspectiveCamera();
   camara.position.z = 50;
-  camara.position.x = 25;
   camara.lookAt(escena.position);
   
   renderer = new THREE.WebGLRenderer();
