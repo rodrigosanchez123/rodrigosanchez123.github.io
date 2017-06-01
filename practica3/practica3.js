@@ -36,7 +36,7 @@ iluminacion.position.z = 10;
 function loop(){
 requestAnimationFrame(loop);
 
-plano.rotation.y += 0.01;
+//plano.rotation.y += 0.01;
 //plano.rotation.y += 0.01;
 
 renderer.render(escena,camara);
