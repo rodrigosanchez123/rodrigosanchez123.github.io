@@ -1,7 +1,7 @@
 function setup(){ 
-var iluminacion = new THREE.PointLight(0xFFFFFF);
-iluminacion.position.y = 10;
-iluminacion.position.z = 10;
+var iluminacion = new THREE.AmbientLight(0xFFFFFF);
+//iluminacion.position.y = 10;
+//iluminacion.position.z = 10;
 	
  escena = new THREE.Scene();
 	escena.add(iluminacion);
