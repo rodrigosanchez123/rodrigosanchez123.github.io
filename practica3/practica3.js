@@ -11,7 +11,7 @@ var iluminacion = new THREE.AmbientLight(0xFFFFFF);
     	var PlanoMaterial = new THREE.MeshBasicMaterial({map:planoimagen, side:THREE.DoubleSide});
     
   	plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
-  	plano.rotateX(Math.PI/6);
+  	plano.rotateX(Math.PI/2);
         escena.add(plano);
      });
  
