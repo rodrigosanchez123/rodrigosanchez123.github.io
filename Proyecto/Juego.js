@@ -11,7 +11,7 @@ function setup(){
  //RENDER
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
-  document.body.appendChild(renderer.domElement);
+  
   //EJES
  var ejes = new THREE.AxisHelper(8);
  escena.add(ejes);
@@ -24,8 +24,10 @@ function setup(){
       	escena.add( godzilla );	});
 	
 //ControlEscenario
-  var controls = new THREE.OrbitControls( camara);
+  var controls = new THREE.OrbitControls( camara, renderer.domElement );
 	controls.target=(new THREE.Vector3(70,0,70)) ; 
+	
+	document.body.appendChild(renderer.domElement);
   }
 
 function loop(){
