@@ -29,9 +29,8 @@ function setup(){
   }
 
 function loop(){
-  renderer.render(escena,camara);
-	controls.update();
-	
+  controls.update();
+  renderer.render(escena,camara);	
   requestAnimationFrame(loop);
 }
   
