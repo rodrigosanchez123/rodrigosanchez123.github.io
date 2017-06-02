@@ -2,9 +2,10 @@ function setup(){
 var iluminacion = new THREE.AmbientLight(0xFFFFFF);
 //iluminacion.position.y = 10;
 //iluminacion.position.z = 10;
-	
+var axisHelper = new THREE.AxisHelper( 5 );	
  escena = new THREE.Scene();
 	escena.add(iluminacion);
+	escena.add(axisHelper);
     var loader= new THREE.TextureLoader();
      	loader.load('https:Cragmaw.jpg', function ( planoimagen ) {
        	var PlanoGeometria = new THREE.BoxGeometry(50,70,1);
