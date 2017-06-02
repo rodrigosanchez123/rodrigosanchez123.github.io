@@ -1,4 +1,4 @@
-function setup(){
+fnction setup(){
 //LUZ
   iluminacion = new THREE.AmbientLight(0xFFFFFF);
 //ESCENA  
