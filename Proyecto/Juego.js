@@ -24,7 +24,8 @@ function setup(){
       	escena.add( godzilla );	});
 	
 //ControlEscenario
-  var controls = new THREE.OrbitControls( camara, renderer.domElement );
+  var controls = new THREE.OrbitControls( camara);
+	controls.target=(new THREE.Vector3(70,0,70)) ; 
   }
 
 function loop(){
