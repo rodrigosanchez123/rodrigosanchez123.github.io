@@ -15,7 +15,11 @@ fuction setup(){
  var ejes = new THREE.AxisHelper(8);
  escena.add(ejes);
   }
+
+function loop(){
+  renderer.render(escena,camara);
+}
   
   var iluminacion, escena, camara, renderer;
   setup();
-  
+  loop();
