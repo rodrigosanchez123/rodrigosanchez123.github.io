@@ -6,7 +6,7 @@ function setup(){
    escena.add(iluminacion);
 //CAMARA
   camara = new THREE.PerspectiveCamera();
-  camara.position.set(0,0,50);
+  camara.position.set(0,50,50);
   camara.lookAt(escena.position);
  //RENDER
   renderer = new THREE.WebGLRenderer();
@@ -16,12 +16,12 @@ function setup(){
  var ejes = new THREE.AxisHelper(8);
  escena.add(ejes);
   
-  var godzilla = new THREE.JSONLoader();
-     godzilla.load('https://rodrigosanchez123.github.io/Proyecto/Personajes/godzilla.json',	function ( geometry, materials ) {
+  var loadergodzilla = new THREE.JSONLoader();
+     loadergodzilla.load('https://rodrigosanchez123.github.io/Proyecto/Personajes/godzilla.json',	function ( geometry, materials ) {
      	var material = materials[0];
-		    var object = new THREE.Mesh( geometry, material );
-	     object.scale.set(2,2,2);
-      escena.add( object );	});
+	var godzilla = new THREE.Mesh( geometry, material );
+	godzilla.scale.set(2,2,2);
+      	escena.add( godzilla );	});
   }
 
 function loop(){
