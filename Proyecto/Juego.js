@@ -24,7 +24,7 @@ function setup(){
       	escena.add( godzilla );	});
 	
 //ControlEscenario
-  var controls = new THREE.OrbitControls( camara, renderer.domElement );
+  controls = new THREE.OrbitControls( camara, renderer.domElement );
 	
   }
 
@@ -35,5 +35,6 @@ function loop(){
 }
   
   var iluminacion, escena, camara, renderer;
+  var controls;
   setup();
   loop();
