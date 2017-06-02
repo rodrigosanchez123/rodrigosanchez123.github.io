@@ -16,7 +16,7 @@ function setup(){
  escena.add(ejes);
   
   var godzilla = new THREE.JSONLoader();
-     godzilla.load('https:barco.json',	function ( geometry, materials ) {
+     godzilla.load('https:godzilla-coversion.json',	function ( geometry, materials ) {
      	var material = materials[0];
 		    var object = new THREE.Mesh( geometry, material );
 	     object.scale.set(2,2,2);
