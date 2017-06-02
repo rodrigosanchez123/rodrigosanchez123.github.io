@@ -26,6 +26,7 @@ var axisHelper = new THREE.AxisHelper( 5 );
   
   camara = new THREE.PerspectiveCamera();
   camara.position.z = 50;
+  camara.position.x = 50;
   camara.lookAt(escena.position);
   
   renderer = new THREE.WebGLRenderer();
