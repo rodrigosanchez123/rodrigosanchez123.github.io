@@ -14,6 +14,13 @@ function setup(){
   //EJES
  var ejes = new THREE.AxisHelper(8);
  escena.add(ejes);
+  
+  var godzilla = new THREE.JSONLoader();
+     godzilla.load('https:barco.json',	function ( geometry, materials ) {
+     	var material = materials[0];
+		    var object = new THREE.Mesh( geometry, material );
+	     object.scale.set(2,2,2);
+      escena.add( object );	});
   }
 
 function loop(){
