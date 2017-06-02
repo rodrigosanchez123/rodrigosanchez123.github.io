@@ -3,6 +3,7 @@ function setup(){
   iluminacion = new THREE.AmbientLight(0xFFFFFF);
 //ESCENA  
   escena = new THREE.Scene();
+   escena.add(iluminacion);
 //CAMARA
   camara = new THREE.PerspectiveCamera();
   camara.position.set(0,0,50);
