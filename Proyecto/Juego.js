@@ -25,7 +25,7 @@ function setup(){
 
 function loop(){
   renderer.render(escena,camara);
-  requestFrameAnimation(
+  requestAnimationFrame(loop);
 }
   
   var iluminacion, escena, camara, renderer;
