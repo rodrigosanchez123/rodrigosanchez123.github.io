@@ -22,10 +22,15 @@ function setup(){
 	var godzilla = new THREE.Mesh( geometry, material );
 	godzilla.scale.set(2,2,2);
       	escena.add( godzilla );	});
+	
+//ControlEscenario
+  var controls = new THREE.OrbitControls( camara, renderer.domElement );
   }
 
 function loop(){
   renderer.render(escena,camara);
+	controls.update();
+	
   requestAnimationFrame(loop);
 }
   
