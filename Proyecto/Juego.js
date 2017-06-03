@@ -35,8 +35,14 @@ function setup(){
 	godzilla.scale.set(2,2,2);
       	escena.add( godzilla );	});
 	
-
 	
+	//Raycaster
+   //raycaster = new THREE.Raycaster();
+
+     // document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+     // document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+     // document.addEventListener( 'mouseup', onDocumentMouseUp, false );
+     // window.addEventListener( 'resize', onWindowResize, false );
 
   }
 
