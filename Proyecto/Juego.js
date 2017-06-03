@@ -23,7 +23,7 @@ function setup(){
   controls = new THREE.OrbitControls( camara, renderer.domElement );
 	controls.minPolarAngle = Math.PI/8;
 	controls.maxPolarAngle = Math.PI / 2;
-       // controls.enablePan = false;
+        controls.enablePan = false;
         controls.minDistance = 100;
         controls.maxDistance = 300;
 	
