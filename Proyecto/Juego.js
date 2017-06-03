@@ -15,7 +15,19 @@ function setup(){
   //EJES
  var ejes = new THREE.AxisHelper(8);
  escena.add(ejes);
-  
+  //Fondo	
+    escena.background = new THREE.CubeTextureLoader()
+	.setPath( 'Imagenes/' )
+	.load( [ 'dark-s_px.jpg', 'dark-s_nx.jpg', 'dark-s_py.jpg', 'dark-s_ny.jpg', 'dark-s_pz.jpg', 'dark-s_nz.jpg' ] );
+  //ControlEscenario
+  controls = new THREE.OrbitControls( camara, renderer.domElement );
+	controls.minPolarAngle = Math.PI/8;
+	controls.maxPolarAngle = Math.PI / 2;
+       // controls.enablePan = false;
+        controls.minDistance = 100;
+        controls.maxDistance = 300;
+	
+ //Personajes  
   var loadergodzilla = new THREE.JSONLoader();
      loadergodzilla.load('https://rodrigosanchez123.github.io/Proyecto/Personajes/godzilla.json',	function ( geometry, materials ) {
      	var material = materials[0];
@@ -23,13 +35,9 @@ function setup(){
 	godzilla.scale.set(2,2,2);
       	escena.add( godzilla );	});
 	
-//ControlEscenario
-  controls = new THREE.OrbitControls( camara, renderer.domElement );
+
 	
-//Fondo	
-    escena.background = new THREE.CubeTextureLoader()
-	.setPath( 'Imagenes/' )
-	.load( [ 'dark-s_px.jpg', 'dark-s_nx.jpg', 'dark-s_py.jpg', 'dark-s_ny.jpg', 'dark-s_pz.jpg', 'dark-s_nz.jpg' ] );
+
   }
 
 function loop(){
