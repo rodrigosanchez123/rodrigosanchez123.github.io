@@ -30,7 +30,7 @@ function setup(){
         var imagenPrefix = "Imagenes/dark-s_";
 	var directions  = ["px", "nx", "py", "ny", "pz", "nz"];
 	var imagenSuffix = ".png";
-	var FondoGeometry = new THREE.CubeGeometry( 5000, 5000, 5000 );	
+	var FondoGeometry = new THREE.BoxGeometry( 5000, 5000, 5000 );	
 	
 	var materialArray = [];
 	for (var i = 0; i < 6; i++)
