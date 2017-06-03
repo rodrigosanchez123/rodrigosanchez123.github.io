@@ -26,6 +26,21 @@ function setup(){
 //ControlEscenario
   controls = new THREE.OrbitControls( camara, renderer.domElement );
 	
+//Fondo
+        var imagenPrefix = "Images/dark-s_";
+	var directions  = ["xpos", "xneg", "ypos", "yneg", "zpos", "zneg"];
+	var imagenSuffix = ".png";
+	var FondoGeometry = new THREE.CubeGeometry( 5000, 5000, 5000 );	
+	
+	var materialArray = [];
+	for (var i = 0; i < 6; i++)
+		materialArray.push( new THREE.MeshBasicMaterial({
+			map: THREE.ImageUtils.loadTexture( imagenPrefix + directions[i] + imagenSuffix ),
+			side: THREE.BackSide
+		}));
+	var FondoMaterial = new THREE.MeshBasicMaterial( materialArray );
+	var FondoBox = new THREE.Mesh( FondoGeometry, FondoMaterial );
+	escena.add( FondoBox );	
   }
 
 function loop(){
