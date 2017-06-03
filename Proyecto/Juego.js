@@ -27,7 +27,7 @@ function setup(){
   controls = new THREE.OrbitControls( camara, renderer.domElement );
 	
 //Fondo
-        var imagenPrefix = "Images/dark-s_";
+        var imagenPrefix = "Imagenes/dark-s_";
 	var directions  = ["xpos", "xneg", "ypos", "yneg", "zpos", "zneg"];
 	var imagenSuffix = ".png";
 	var FondoGeometry = new THREE.CubeGeometry( 5000, 5000, 5000 );	
