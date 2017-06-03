@@ -42,7 +42,7 @@ function setup(){
      // document.addEventListener( 'mousemove', onDocumentMouseMove, false );
      // document.addEventListener( 'mousedown', onDocumentMouseDown, false );
      // document.addEventListener( 'mouseup', onDocumentMouseUp, false );
-     // window.addEventListener( 'resize', onWindowResize, false );
+      window.addEventListener( 'resize', pantalla, false );
 
   }
 
@@ -52,6 +52,13 @@ function loop(){
   requestAnimationFrame(loop);
 }
   
+function pantalla(){
+	camara.aspect = window.innerWidth/window.innerHeight;
+	camara.updateProjectionMatrix();
+	renderer.setSize(window.innerWidth,window.innerHeight);
+}
+		
+
   var iluminacion, escena, camara, renderer;
   var controls;
   setup();
