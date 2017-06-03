@@ -28,8 +28,8 @@ function setup(){
 	
 //Fondo	
     escena.background = new THREE.CubeTextureLoader()
-	.setPath( 'https:Imagenes/' )
-	.load( [ 'dark-s_px.png', 'dark-s_nx.png', 'dark-s_py.png', 'dark-s_ny.png', 'dark-s_pz.png', 'dark-s_nz.png' ] );
+	.setPath( 'Imagenes/' )
+	.load( [ 'dark-s_px.jpg', 'dark-s_nx.jpg', 'dark-s_py.jpg', 'dark-s_ny.jpg', 'dark-s_pz.jpg', 'dark-s_nz.jpg' ] );
   }
 
 function loop(){
