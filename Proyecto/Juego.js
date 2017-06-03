@@ -28,7 +28,7 @@ function setup(){
 	
 //Fondo	
     escena.background = new THREE.CubeTextureLoader()
-	.setPath( 'Imagenes/' )
+	.setPath( 'https:Imagenes/' )
 	.load( [ 'dark-s_px.png', 'dark-s_nx.png', 'dark-s_py.png', 'dark-s_ny.png', 'dark-s_pz.png', 'dark-s_nz.png' ] );
   }
 
