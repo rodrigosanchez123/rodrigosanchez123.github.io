@@ -28,7 +28,7 @@ function setup(){
 	
 //Fondo
         var imagenPrefix = "Imagenes/dark-s_";
-	var directions  = ["xpos", "xneg", "ypos", "yneg", "zpos", "zneg"];
+	var directions  = ["px", "nx", "py", "ny", "pz", "nz"];
 	var imagenSuffix = ".png";
 	var FondoGeometry = new THREE.CubeGeometry( 5000, 5000, 5000 );	
 	
