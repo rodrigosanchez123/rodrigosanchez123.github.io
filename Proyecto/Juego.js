@@ -26,6 +26,8 @@ function setup(){
         controls.enablePan = false;
         controls.minDistance = 100;
         controls.maxDistance = 300;
+  //Mouse
+	mouse = new THREE.Vector2();
 	
  //Personajes  
   var loadergodzilla = new THREE.JSONLoader();
@@ -58,8 +60,18 @@ function pantalla(){
 	renderer.setSize(window.innerWidth,window.innerHeight);
 }
 		
+function Movimentomouse( event ) {
+
+      event.preventDefault();
+      // mouse x and y are between -1 and 1 (normalized?)
+      mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+      mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+      EncontrarIntersections();
+
+    }
 
   var iluminacion, escena, camara, renderer;
-  var controls;
+  var controls, mouse, INTERSECTED;
   setup();
   loop();
