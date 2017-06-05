@@ -33,7 +33,7 @@ function setup(){
   var loadergodzilla = new THREE.JSONLoader();
      loadergodzilla.load('https://rodrigosanchez123.github.io/Proyecto/Personajes/godzilla.json',	function ( geometry, materials ) {
      	var material = materials[0];
-	var godzilla = new THREE.Mesh( geometry, material );
+	 godzilla = new THREE.Mesh( geometry, material );
 	godzilla.scale.set(2,2,2);
       	escena.add( godzilla );	});
 	
@@ -90,6 +90,6 @@ function EncontrarInter(){
 			}
 
   var iluminacion, escena, camara, renderer;
-  var controls, mouse, INTERSECTED, raycaster;
+  var controls, mouse, INTERSECTED, raycaster, godzilla;
   setup();
   loop();
