@@ -37,9 +37,8 @@ function setup(){
 	godzilla.scale.set(2,2,2);
       	escena.add( godzilla );	});
 	
-	
-	//Raycaster
-   //raycaster = new THREE.Raycaster();
+ //Raycaster
+   raycaster = new THREE.Raycaster();
 
      // document.addEventListener( 'mousemove', onDocumentMouseMove, false );
      // document.addEventListener( 'mousedown', onDocumentMouseDown, false );
@@ -67,11 +66,16 @@ function Movimentomouse( event ) {
       mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
       mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
 
-      EncontrarIntersections();
+      EncontrarInter();
 
     }
 
+function EncontrarInter(){
+      var vector = new THREE.Vector3( mouse.x, mouse.y, 1 ).unproject( camara );
+        raycaster.set( camara.position, vector.sub( camara.position ).normalize() );
+      var interseccion = raycaster.intersectObjects( pyramidGroup.children );
+
   var iluminacion, escena, camara, renderer;
-  var controls, mouse, INTERSECTED;
+  var controls, mouse, INTERSECTED, raycaster;
   setup();
   loop();
