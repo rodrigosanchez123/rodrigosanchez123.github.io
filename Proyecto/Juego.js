@@ -71,8 +71,8 @@ function Movimientomouse( event ) {
     }
 
 function EncontrarInter(){
-      var vector = new THREE.Vector3( mouse.x, mouse.y, 1 ).unproject( camara );
-        raycaster.set( camara.position, vector.sub( camara.position ).normalize() );
+     
+        raycaster.setFromCamera( mouse,camara );
       var interseccion = raycaster.intersectObjects( godzilla );
 	if ( interseccion.length > 0 ) {
 
