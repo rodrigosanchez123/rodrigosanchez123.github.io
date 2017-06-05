@@ -73,7 +73,21 @@ function Movimentomouse( event ) {
 function EncontrarInter(){
       var vector = new THREE.Vector3( mouse.x, mouse.y, 1 ).unproject( camara );
         raycaster.set( camara.position, vector.sub( camara.position ).normalize() );
-      var interseccion = raycaster.intersectObjects( pyramidGroup.children );
+      var interseccion = raycaster.intersectObjects( godzilla );
+	if ( interseccion.length > 0 ) {
+
+        if ( INTERSECTED != interseccion[ 0 ].object ) {
+			if ( INTERSECTED ) INTERSECTED.material.emissive.setHex( INTERSECTED.currentHex );
+						INTERSECTED = interseccion[ 0 ].object;
+						INTERSECTED.currentHex = INTERSECTED.material.emissive.getHex();
+						INTERSECTED.material.emissive.setHex( 0xff0000 );
+					}
+				} else {
+					if ( INTERSECTED ) INTERSECTED.material.emissive.setHex( INTERSECTED.currentHex );
+					INTERSECTED = null;
+				}
+	renderer.render( escena, camara );
+			}
 
   var iluminacion, escena, camara, renderer;
   var controls, mouse, INTERSECTED, raycaster;
