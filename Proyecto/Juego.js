@@ -40,7 +40,7 @@ function setup(){
  //Raycaster
    raycaster = new THREE.Raycaster();
 
-     // document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+      document.addEventListener( 'mousemove', Movimientomouse, false );
      // document.addEventListener( 'mousedown', onDocumentMouseDown, false );
      // document.addEventListener( 'mouseup', onDocumentMouseUp, false );
       window.addEventListener( 'resize', pantalla, false );
