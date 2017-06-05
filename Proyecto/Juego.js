@@ -59,7 +59,7 @@ function pantalla(){
 	renderer.setSize(window.innerWidth,window.innerHeight);
 }
 		
-function Movimentomouse( event ) {
+function Movimientomouse( event ) {
 
       event.preventDefault();
       // mouse x and y are between -1 and 1 (normalized?)
