@@ -25,7 +25,7 @@ function setup(){
   
   function loop(){
   
- var intersects = raycaster.intersectObjects(cubo1);
+ var intersects = raycaster.intersectObjects(escena.children);
  if(intersects.length>0) step = -step;
  
   cubo1.rotation.x += step;
