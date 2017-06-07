@@ -2,18 +2,15 @@ function setup(){
 //
 THREE.ImageUtils.crossOrigin = '';
 var textura = THREE.ImageUtils.loadTexture('https:Imagenes/Piso.jpg');
-var camaratarget = new THREE.BoxGeometry(0,0,0);
-	camaratarget.translate(100,0,100);
 //LUZ
   iluminacion = new THREE.AmbientLight(0xFFFFFF);
 //ESCENA  
   escena = new THREE.Scene();
    escena.add(iluminacion);
-   escena.add(camaratarget);
 //CAMARA
   camara = new THREE.PerspectiveCamera();
   camara.position.set(0,50,50);
-  camara.lookAt(camaratarget.position);
+  camara.lookAt(escena.position);
  //RENDER
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
