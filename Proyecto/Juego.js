@@ -1,4 +1,7 @@
 function setup(){
+//
+THREE.ImageUtils.crossOrigin = '';
+var textura = THREE.ImageUtils.loadTexture('https:Imagenes/Piso.jpg');
 //LUZ
   iluminacion = new THREE.AmbientLight(0xFFFFFF);
 //ESCENA  
@@ -37,7 +40,7 @@ PisoGeometria.translate(-100+i,0,-100+j);
 
 
 
-var PisoMaterial = new THREE.MeshLambertMaterial({ color: Math.random()*0xFFFFFF});
+var PisoMaterial = new THREE.MeshLambertMaterial({map: textura});
 var Piso= new THREE.Mesh(PisoGeometria,PisoMaterial);
 escena.add(Piso);
 Piso.receiveShadow = true;
