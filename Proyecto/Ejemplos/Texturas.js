@@ -73,10 +73,11 @@ escena.add(Mago);
 
 var loader= new THREE.TextureLoader();
     loader.load('https:cesped.jpg', function ( planoimagen ) {
-    var PlanoGeometria = new THREE.BoxGeometry(50,70,1);
+    var PlanoGeometria = new THREE.BoxGeometry(150,170,1);
     var PlanoMaterial = new THREE.MeshBasicMaterial({map:planoimagen, side:THREE.DoubleSide});
 	    plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
   	plano.rotateX(Math.PI/2);
+	plano.scale.set(2,2,2);
         escena.add(plano);
 });
 
