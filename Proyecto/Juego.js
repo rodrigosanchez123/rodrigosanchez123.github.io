@@ -10,7 +10,7 @@ var textura = THREE.ImageUtils.loadTexture('https:Imagenes/Piso.jpg');
 //CAMARA
   camara = new THREE.PerspectiveCamera();
   camara.position.set(0,50,50);
-  camara.lookAt(escena.position);
+  camara.lookAt(100,0,100);
  //RENDER
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
@@ -49,7 +49,7 @@ var Piso= new THREE.Mesh(PisoGeometria,PisoMaterial);
      loadergodzilla.load('https://rodrigosanchez123.github.io/Proyecto/Personajes/godzilla.json',	function ( geometry, materials ) {
      	var material = materials[0];
 	 godzilla = new THREE.Mesh( geometry, material );
-	godzilla.scale.set(2,2,2);
+	godzilla.scale.set(2.5,2.5,2.5);
       	escena.add( godzilla );	});
 	
  //Raycaster
