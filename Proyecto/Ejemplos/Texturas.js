@@ -83,7 +83,7 @@ document.body.appendChild(renderizador.domElement);
 }
 
 function loop() {
-//               requestAnimationFrame( loop );
+               requestAnimationFrame( loop );
             
 //                  monito.rotation.y += 0.1;
 //                  cabeza.rotation.x += 0.1;
