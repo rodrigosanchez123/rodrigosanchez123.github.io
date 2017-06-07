@@ -3,7 +3,7 @@ function setup(){
 THREE.ImageUtils.crossOrigin = '';
 var textura = THREE.ImageUtils.loadTexture('https:Imagenes/Piso.jpg');
 var camaratarget = new THREE.BoxGeometry(0,0,0);
-	camaratarget.position.set(100,0,100);
+	camaratarget.translate(100,0,100);
 //LUZ
   iluminacion = new THREE.AmbientLight(0xFFFFFF);
 //ESCENA  
