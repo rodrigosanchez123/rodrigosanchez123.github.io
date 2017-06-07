@@ -1,5 +1,3 @@
-
-
 function setup(){
 escena= new THREE.Scene();
 var loader= new THREE.TextureLoader();
@@ -65,12 +63,21 @@ Magoforma.merge(CapaMago.geometry, CapaMago.matrix);
 Magoforma.merge(SombreroMago.geometry, SombreroMago.matrix);
 
 
-var Magomaterial= new THREE.MeshBasicMaterial({map:piedra});
+var Magomaterial= new THREE.MeshBasicMaterial({map:piedra,side:THREE.DoubleSide});
 
 var Mago= new THREE.Mesh(Magoforma,Magomaterial);
 Mago.rotateY(Math.PI*7/8);
 //monito.rotateY(Math.PI/3)
 escena.add(Mago);
+});
+
+var loader= new THREE.TextureLoader();
+    loader.load('https:cesped.jpg', function ( planoimagen ) {
+    var PlanoGeometria = new THREE.BoxGeometry(50,70,1);
+    var PlanoMaterial = new THREE.MeshBasicMaterial({map:planoimagen, side:THREE.DoubleSide});
+	    plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
+  	plano.rotateX(Math.PI/2);
+        escena.add(plano);
 });
 
 camara= new THREE.PerspectiveCamera();
