@@ -45,7 +45,7 @@ var Piso= new THREE.Mesh(PisoGeometria,PisoMaterial);
   }
 }  
             //Pared
-var murogeo = new THREE.BoxGeometry(200,25,3);
+var murogeo = new THREE.BoxGeometry(200,25,3,5,5,5);
 var muropiel = new THREE.MeshLambertMaterial({map:textura2});
 var Muro = new THREE.Mesh(murogeo,muropiel);
    Muro.position.set(80,10,80);
@@ -56,7 +56,7 @@ var Muro = new THREE.Mesh(murogeo,muropiel);
      loadergodzilla.load('https://rodrigosanchez123.github.io/Proyecto/Personajes/godzilla.json',	function ( geometry, materials ) {
      	var material = materials[0];
 	 godzilla = new THREE.Mesh( geometry, material );
-	godzilla.scale.set(2.5,2.5,2.5);
+	godzilla.scale.set(3,3,3);
       	escena.add( godzilla );	});
 	
  //Raycaster
