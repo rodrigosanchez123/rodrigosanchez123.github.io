@@ -48,7 +48,7 @@ var Piso= new THREE.Mesh(PisoGeometria,PisoMaterial);
 var murogeo = new THREE.BoxGeometry(200,25,3);
 var muropiel = new THREE.MeshLambertMaterial({map:textura2});
 var Muro = new THREE.Mesh(murogeo,muropiel);
-   Muro.position.set(90,20,100);
+   Muro.position.set(80,10,80);
    escena.add(Muro);
 	
  //Personajes  
