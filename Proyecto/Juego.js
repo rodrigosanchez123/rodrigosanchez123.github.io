@@ -32,9 +32,9 @@ var textura = THREE.ImageUtils.loadTexture('https:Imagenes/Piso.jpg');
   //Mouse
 	mouse = new THREE.Vector2();
  //Escenario
-for (i=0; i<200; i+=10){
-   for (j=0; j<200; j+=10){
-var PisoGeometria = new THREE.PlaneGeometry(10,10);
+for (i=0; i<200; i+=20){
+   for (j=0; j<200; j+=20){
+var PisoGeometria = new THREE.PlaneGeometry(20,20);
   PisoGeometria.rotateX(Math.PI*-1/2);
   PisoGeometria.translate(0+i,0,0+j);
 var PisoMaterial = new THREE.MeshLambertMaterial({map: textura});
