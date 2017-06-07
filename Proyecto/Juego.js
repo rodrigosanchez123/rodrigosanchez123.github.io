@@ -45,7 +45,7 @@ var Piso= new THREE.Mesh(PisoGeometria,PisoMaterial);
   }
 }  
             //Pared
-var murogeo = new THREE.BoxGeometry(200,25,3,5,5,5);
+var murogeo = new THREE.BoxGeometry(200,25,3,15,15,15);
 var muropiel = new THREE.MeshLambertMaterial({map:textura2});
 var Muro = new THREE.Mesh(murogeo,muropiel);
    Muro.position.set(80,10,80);
