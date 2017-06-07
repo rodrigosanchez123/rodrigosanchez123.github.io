@@ -2,6 +2,8 @@ function setup(){
 //
 THREE.ImageUtils.crossOrigin = '';
 var textura = THREE.ImageUtils.loadTexture('https:Imagenes/Piso.jpg');
+var camaratarget = new THREE.BoxGeometry(0,0,0);
+	camaratarget.position.set(100,0,100);
 //LUZ
   iluminacion = new THREE.AmbientLight(0xFFFFFF);
 //ESCENA  
@@ -10,7 +12,7 @@ var textura = THREE.ImageUtils.loadTexture('https:Imagenes/Piso.jpg');
 //CAMARA
   camara = new THREE.PerspectiveCamera();
   camara.position.set(0,50,50);
-  camara.lookAt(new THREE.Vector3(100,0,100));
+  camara.lookAt(camaratarget.position);
  //RENDER
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
