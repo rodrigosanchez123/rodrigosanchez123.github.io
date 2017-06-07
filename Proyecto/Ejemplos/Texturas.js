@@ -71,7 +71,7 @@ escena.add(Mago);
 function setup(){
 escena= new THREE.Scene();
 var loader= new THREE.TextureLoader();
-     	loader.load('https:piedra.jpg', carga());
+     	loader.load('https:piedra.jpg', carga(piedra));
 
 camara= new THREE.PerspectiveCamera();
 camara.position.z=300;
