@@ -1,4 +1,9 @@
-var carga = function (piedra){
+
+
+function setup(){
+escena= new THREE.Scene();
+var loader= new THREE.TextureLoader();
+     	loader.load('https:piedra.jpg', function (piedra){
 var cabezamagog=[];
 cabezamagog.push( new THREE.Vector2(0.01,0.0));
 cabezamagog.push( new THREE.Vector2(2.5,1.5));
@@ -66,12 +71,7 @@ var Mago= new THREE.Mesh(Magoforma,Magomaterial);
 Mago.rotateY(Math.PI*7/8);
 //monito.rotateY(Math.PI/3)
 escena.add(Mago);
-};
-
-function setup(){
-escena= new THREE.Scene();
-var loader= new THREE.TextureLoader();
-     	loader.load('https:piedra.jpg', carga(piedra));
+});
 
 camara= new THREE.PerspectiveCamera();
 camara.position.z=300;
