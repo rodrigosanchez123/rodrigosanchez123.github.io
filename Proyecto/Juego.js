@@ -33,7 +33,7 @@ for (i=0; i<200; i+=10){
    for (j=0; j<200; j+=10){
 var PisoGeometria = new THREE.PlaneGeometry(10,10);
 PisoGeometria.translate(-100+i,0,-100+j);
-	   PisoGeometria.rotateY(Math.PI/2);
+	   PisoGeometria.rotateZ(Math.PI/2);
 
 
 var PisoMaterial = new THREE.MeshLambertMaterial({ color: Math.random()*0xFFFFFF});
