@@ -10,7 +10,7 @@ var textura = THREE.ImageUtils.loadTexture('https:Imagenes/Piso.jpg');
 //CAMARA
   camara = new THREE.PerspectiveCamera();
   camara.position.set(0,50,50);
-  camara.lookAt(100,0,100);
+  camara.lookAt(new THREE.Vector3(100,0,100));
  //RENDER
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
