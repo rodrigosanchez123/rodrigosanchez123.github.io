@@ -76,7 +76,7 @@ var loader= new THREE.TextureLoader();
     var PlanoGeometria = new THREE.BoxGeometry(150,170,1);
     var PlanoMaterial = new THREE.MeshBasicMaterial({map:planoimagen, side:THREE.DoubleSide});
 	    plano = new THREE.Mesh(PlanoGeometria,PlanoMaterial);
-	plano.position.y=-10
+	plano.position.y=-10;
   	plano.rotateX(Math.PI/2);
 	plano.scale.set(2,2,2);
         escena.add(plano);
