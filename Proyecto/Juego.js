@@ -9,6 +9,7 @@ var camaratarget = new THREE.BoxGeometry(0,0,0);
 //ESCENA  
   escena = new THREE.Scene();
    escena.add(iluminacion);
+   escena.add(camaratarget);
 //CAMARA
   camara = new THREE.PerspectiveCamera();
   camara.position.set(0,50,50);
