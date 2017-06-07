@@ -1,4 +1,4 @@
-function personaje(){
+var carga = function (piedra){
 var cabezamagog=[];
 cabezamagog.push( new THREE.Vector2(0.01,0.0));
 cabezamagog.push( new THREE.Vector2(2.5,1.5));
@@ -60,17 +60,18 @@ Magoforma.merge(CapaMago.geometry, CapaMago.matrix);
 Magoforma.merge(SombreroMago.geometry, SombreroMago.matrix);
 
 
-var Magomaterial= new THREE.MeshNormalMaterial();
+var Magomaterial= new THREE.MeshBasicMaterial({map:piedra});
 
 var Mago= new THREE.Mesh(Magoforma,Magomaterial);
 Mago.rotateY(Math.PI*7/8);
 //monito.rotateY(Math.PI/3)
 escena.add(Mago);
-}
+};
 
 function setup(){
 escena= new THREE.Scene();
-
+var loader= new THREE.TextureLoader();
+     	loader.load('https:piedra.jpg', carga());
 
 camara= new THREE.PerspectiveCamera();
 camara.position.z=300;
@@ -91,5 +92,4 @@ function loop() {
 
 var escena, camara, renderizador;
 setup();
-personaje();
 loop();
