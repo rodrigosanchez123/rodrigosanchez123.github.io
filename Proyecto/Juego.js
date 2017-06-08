@@ -8,10 +8,6 @@ var textura2 = THREE.ImageUtils.loadTexture('https:Imagenes/piedra.jpg');
 //ESCENA  
   escena = new THREE.Scene();
    escena.add(iluminacion);
-//CAMARA
-  camara = new THREE.PerspectiveCamera();
-  camara.position.set(0,50,50);
-  camara.lookAt(escena.position);
  //RENDER
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
@@ -59,7 +55,12 @@ var Muro = new THREE.Mesh(murogeo,muropiel);
 	godzilla.scale.set(3,3,3);
       	escena.add( godzilla );	});
 	
- //Raycaster
+//CAMARA
+  camara = new THREE.PerspectiveCamera();
+  camara.position.set(0,50,50);
+  camara.lookAt(Muro.position);
+	
+//Raycaster
    raycaster = new THREE.Raycaster();
 
       document.addEventListener( 'mousemove', Movimientomouse, false );
