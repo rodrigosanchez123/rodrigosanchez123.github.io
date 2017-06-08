@@ -2,7 +2,7 @@ function setup(){
 //
 THREE.ImageUtils.crossOrigin = '';
 var textura = THREE.ImageUtils.loadTexture('https:Imagenes/Piso.jpg');
-var textura2 = THREE.ImageUtils.loadTexture('https:Imagenes/piedra.jpg');
+var textura2 = THREE.ImageUtils.loadTexture('https:Imagenes/Piedra.jpg');
 //LUZ
   iluminacion = new THREE.AmbientLight(0xFFFFFF);
 //ESCENA  
