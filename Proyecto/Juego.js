@@ -7,7 +7,11 @@ var textura2 = THREE.ImageUtils.loadTexture('https:Imagenes/piedra.jpg');
   iluminacion = new THREE.AmbientLight(0xFFFFFF);
 //ESCENA  
   escena = new THREE.Scene();
-   escena.add(iluminacion);
+   escena.add(iluminacion);	
+//CAMARA
+  camara = new THREE.PerspectiveCamera();
+  camara.position.set(0,50,50);
+  camara.lookAt(escena.position);	
  //RENDER
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
@@ -33,7 +37,7 @@ for (i=0; i<200; i+=40){
    for (j=0; j<200; j+=40){
 var PisoGeometria = new THREE.PlaneGeometry(40,40);
   PisoGeometria.rotateX(Math.PI*-1/2);
-  PisoGeometria.translate(0+i,0,0+j);
+  PisoGeometria.translate(-100+i,0,-100+j);
 var PisoMaterial = new THREE.MeshLambertMaterial({map: textura});
 var Piso= new THREE.Mesh(PisoGeometria,PisoMaterial);
   escena.add(Piso);
@@ -54,12 +58,7 @@ var Muro = new THREE.Mesh(murogeo,muropiel);
 	 godzilla = new THREE.Mesh( geometry, material );
 	godzilla.scale.set(3,3,3);
       	escena.add( godzilla );	});
-	
-//CAMARA
-  camara = new THREE.PerspectiveCamera();
-  camara.position.set(0,50,50);
-  camara.lookAt(Muro.position);
-	
+
 //Raycaster
    raycaster = new THREE.Raycaster();
 
