@@ -37,7 +37,7 @@ for (i=0; i<200; i+=40){
    for (j=0; j<200; j+=40){
 var PisoGeometria = new THREE.PlaneGeometry(40,40);
   PisoGeometria.rotateX(Math.PI*-1/2);
-  PisoGeometria.translate(-100+i,0,-100+j);
+  PisoGeometria.translate(-110+i,0,-110+j);
 var PisoMaterial = new THREE.MeshLambertMaterial({map: textura});
 var Piso= new THREE.Mesh(PisoGeometria,PisoMaterial);
   escena.add(Piso);
@@ -45,10 +45,10 @@ var Piso= new THREE.Mesh(PisoGeometria,PisoMaterial);
   }
 }  
             //Pared
-var murogeo = new THREE.BoxGeometry(200,25,3,15,15,15);
+var murogeo = new THREE.BoxGeometry(200,25,3);
 var muropiel = new THREE.MeshLambertMaterial({map:textura2});
 var Muro = new THREE.Mesh(murogeo,muropiel);
-   Muro.position.set(80,10,80);
+ //  Muro.position.set(0,10,0);
    escena.add(Muro);
 	
  //Personajes  
