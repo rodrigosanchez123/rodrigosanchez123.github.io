@@ -37,7 +37,7 @@ for (i=0; i<200; i+=40){
    for (j=0; j<200; j+=40){
 var PisoGeometria = new THREE.PlaneGeometry(40,40);
   PisoGeometria.rotateX(Math.PI*-1/2);
-  PisoGeometria.translate(-110+i,0,-110+j);
+  PisoGeometria.translate(-130+i,0,-130+j);
 var PisoMaterial = new THREE.MeshLambertMaterial({map: textura});
 var Piso= new THREE.Mesh(PisoGeometria,PisoMaterial);
   escena.add(Piso);
