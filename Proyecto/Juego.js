@@ -98,7 +98,7 @@ var golem = new THREE.JSONLoader();
      golem.load('https:Personajes/golem.json',function ( geometry ) {
      	var material6 = new THREE.MeshLambertMaterial({color:0xBDBDBD});
 	var personaje6 = new THREE.Mesh( geometry, material6 );
-	personaje6.position.set(-90,20,30);
+	personaje6.position.set(-90,17,30);
 	personaje6.scale.set(4,4,4);
       	escena.add( personaje6 );	});
 //Raycaster
