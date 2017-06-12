@@ -88,7 +88,7 @@ var alien = new THREE.JSONLoader();
 	
 var amber = new THREE.JSONLoader();
      amber.load('https:Personajes/Lizard.json',function ( geometry, materials ) {
-     	var material5 = materials[0];
+     	var material5 = new THREE.MeshLambertMaterial({color:0x5F4C0B});
 	var personaje5 = new THREE.Mesh( geometry, material5 );
 	personaje5.position.set(-50,0,80);
 	personaje5.scale.set(4,4,4);
