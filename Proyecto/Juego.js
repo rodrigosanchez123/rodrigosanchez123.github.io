@@ -57,10 +57,10 @@ var Muro = new THREE.Mesh(murogeo,muropiel);
   var loadergodzilla = new THREE.JSONLoader();
      loadergodzilla.load('https://rodrigosanchez123.github.io/Proyecto/Personajes/godzilla.json',	function ( geometry, materials ) {
      	var material = materials[0];
-	 godzilla = new THREE.Mesh( geometry, material );
-	godzilla.position.set(75,0,75);
-	godzilla.scale.set(3,3,3);
-      	escena.add( godzilla );	});
+	personaje1 = new THREE.Mesh( geometry, material );
+	personaje1.position.set(75,0,75);
+	personaje1.scale.set(3,3,3);
+      	escena.add( personaje1 );	});
 
 //Raycaster
    raycaster = new THREE.Raycaster();
@@ -115,6 +115,6 @@ function EncontrarInter(){
 			}
 
   var iluminacion, escena, camara, renderer;
-  var controls, mouse, INTERSECTED, raycaster, godzilla;
+  var controls, mouse, INTERSECTED, raycaster, personaje1;
   setup();
   loop();
