@@ -56,25 +56,25 @@ var Muro = new THREE.Mesh(murogeo,muropiel);
  //Personajes  
   var loadergodzilla = new THREE.JSONLoader();
      loadergodzilla.load('https://rodrigosanchez123.github.io/Proyecto/Personajes/godzilla.json',	function ( geometry, materials ) {
-     	var material = materials[0];
-	personaje1 = new THREE.Mesh( geometry, material );
+     	var material1 = materials[0];
+	personaje1 = new THREE.Mesh( geometry, material1 );
 	personaje1.position.set(75,0,75);
 	personaje1.scale.set(3,3,3);
       	escena.add( personaje1 );	});
 	
  var dino = new THREE.JSONLoader();
      dino.load('https:Personajes/Dinoreno.json',function ( geometry, materials ) {
-     	var material = materials[0];
-	var personaje2 = new THREE.Mesh( geometry, material );
+     	var material2 = materials[0];
+	var personaje2 = new THREE.Mesh( geometry, material2 );
 	personaje2.position.set(50,0,60);
 	personaje2.scale.set(4,4,4);
       	escena.add( personaje2 );	});
 
 var tauro = new THREE.JSONLoader();
      tauro.load('https:Personajes/tauro.json',function ( geometry, materials ) {
-     	var material = materials[0];
-	var personaje3 = new THREE.Mesh( geometry, material );
-	personaje3.position.set(50,0,60);
+     	var material3 = materials[0];
+	var personaje3 = new THREE.Mesh( geometry, material3 );
+	personaje3.position.set(0,0,0);
 	personaje3.scale.set(4,4,4);
       	escena.add( personaje3 );	});
 //Raycaster
