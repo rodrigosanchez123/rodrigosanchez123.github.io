@@ -8,9 +8,9 @@ var textura2 = THREE.ImageUtils.loadTexture('https:Imagenes/Piedra.jpg');
 	iluminacion.position.set(0,30,0);
 	iluminacion.castShadow = true;
   iluminacion2 = new THREE.PointLight(0xFFFFFF);
-	iluminacion2.position.set(0,30,-70);
+	iluminacion2.position.set(0,30,-90);
   iluminacion3 = new THREE.PointLight(0xFFFFFF);
-	iluminacion3.position.set(0,30,70);
+	iluminacion3.position.set(0,30,90);
 //ESCENA  
   escena = new THREE.Scene();
    escena.add(iluminacion);
