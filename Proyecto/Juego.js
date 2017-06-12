@@ -58,7 +58,7 @@ var Muro = new THREE.Mesh(murogeo,muropiel);
      loadergodzilla.load('https://rodrigosanchez123.github.io/Proyecto/Personajes/godzilla.json',	function ( geometry, materials ) {
      	var material = materials[0];
 	 godzilla = new THREE.Mesh( geometry, material );
-	godzilla.position.set(150,0,150);
+	godzilla.position.set(75,0,75);
 	godzilla.scale.set(3,3,3);
       	escena.add( godzilla );	});
 
