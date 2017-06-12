@@ -4,10 +4,11 @@ THREE.ImageUtils.crossOrigin = '';
 var textura = THREE.ImageUtils.loadTexture('https:Imagenes/Piso.jpg');
 var textura2 = THREE.ImageUtils.loadTexture('https:Imagenes/Piedra.jpg');
 //LUZ
-  iluminacion = new THREE.AmbientLight(0xFFFFFF);
+  iluminacion = new THREE.PointLight(0xFFFFFF);
+	iluminacion.position.set(-100,30,-100);
 //ESCENA  
   escena = new THREE.Scene();
-   escena.add(iluminacion);	
+   escena.add(iluminacion);
 //CAMARA
   camara = new THREE.PerspectiveCamera();
   camara.position.set(0,50,50);
