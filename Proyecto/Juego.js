@@ -87,12 +87,20 @@ var alien = new THREE.JSONLoader();
       	escena.add( personaje4 );	});	
 	
 var amber = new THREE.JSONLoader();
-     amber.load('https:Personajes/Lizard.json',function ( geometry, materials ) {
+     amber.load('https:Personajes/Lizard.json',function ( geometry ) {
      	var material5 = new THREE.MeshLambertMaterial({color:0x5F4C0B});
 	var personaje5 = new THREE.Mesh( geometry, material5 );
 	personaje5.position.set(-50,0,80);
 	personaje5.scale.set(4,4,4);
       	escena.add( personaje5 );	});
+
+var golem = new THREE.JSONLoader();
+     golem.load('https:Personajes/golem.json',function ( geometry ) {
+     	var material6 = new THREE.MeshLambertMaterial({color:0xBDBDBD});
+	var personaje6 = new THREE.Mesh( geometry, material6 );
+	personaje6.position.set(-90,0,30);
+	personaje6.scale.set(4,4,4);
+      	escena.add( personaje6 );	});
 //Raycaster
    raycaster = new THREE.Raycaster();
 
