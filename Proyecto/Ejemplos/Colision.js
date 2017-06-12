@@ -24,8 +24,6 @@ function setup(){
   raycaster2 = new THREE.Raycaster(pelota1.position, new THREE.Vector3(-1,-1,0));
   raycaster3 = new THREE.Raycaster(pelota2.position, new THREE.Vector3(-1,1,0));
   raycaster4 = new THREE.Raycaster(pelota2.position, new THREE.Vector3(1,-1,0));
-  raycaster5 = new THREE.Raycaster();
-  raycaster5.setFromCamera( new THREE.Vector2(0,0),camara);
 
   escena = new THREE.Scene();
   escena.add(cubo1);
