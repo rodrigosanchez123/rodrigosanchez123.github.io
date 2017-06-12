@@ -85,6 +85,14 @@ var alien = new THREE.JSONLoader();
 	personaje4.position.set(-10,0,30);
 	personaje4.scale.set(4,4,4);
       	escena.add( personaje4 );	});	
+	
+var amber = new THREE.JSONLoader();
+     amber.load('https:Personajes/XenoRanger.json',function ( geometry, materials ) {
+     	var material5 = materials[0];
+	var personaje5 = new THREE.Mesh( geometry, material5 );
+	personaje5.position.set(-50,0,80);
+	personaje5.scale.set(4,4,4);
+      	escena.add( personaje5 );	});
 //Raycaster
    raycaster = new THREE.Raycaster();
 
