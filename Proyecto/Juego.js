@@ -73,7 +73,7 @@ var Muro = new THREE.Mesh(murogeo,muropiel);
 //Raycaster
    raycaster = new THREE.Raycaster();
 
-      document.addEventListener( 'mousemove', Movimientomouse, false );
+  
      // document.addEventListener( 'mousedown', onDocumentMouseDown, false );
      // document.addEventListener( 'mouseup', onDocumentMouseUp, false );
       window.addEventListener( 'resize', pantalla, false );
@@ -92,35 +92,8 @@ function pantalla(){
 	renderer.setSize(window.innerWidth,window.innerHeight);
 }
 		
-function Movimientomouse( event ) {
 
-      event.preventDefault();
-      // mouse x and y are between -1 and 1 (normalized?)
-      mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
-      mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
 
-      EncontrarInter();
-
-    }
-
-function EncontrarInter(){
-     
-        raycaster.setFromCamera( mouse,camara );
-      var interseccion = raycaster.intersectObjects( godzilla );
-	if ( interseccion.length > 0 ) {
-
-        if ( INTERSECTED != interseccion[ 0 ].object ) {
-			if ( INTERSECTED ) INTERSECTED.material.emissive.setHex( INTERSECTED.currentHex );
-						INTERSECTED = interseccion[ 0 ].object;
-						INTERSECTED.currentHex = INTERSECTED.material.emissive.getHex();
-						INTERSECTED.material.emissive.setHex( 0xff0000 );
-					}
-				} else {
-					if ( INTERSECTED ) INTERSECTED.material.emissive.setHex( INTERSECTED.currentHex );
-					INTERSECTED = null;
-				}
-	renderer.render( escena, camara );
-			}
 
   var iluminacion, escena, camara, renderer;
   var controls, mouse, INTERSECTED, raycaster, personaje1;
