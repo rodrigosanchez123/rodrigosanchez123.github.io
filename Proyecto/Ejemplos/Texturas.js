@@ -82,12 +82,17 @@ var loader= new THREE.TextureLoader();
         escena.add(plano);
 });
 
+var material = new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture('https:cielo.jpg'),  side: THREE.BackSide});
+var cubo = new THREE.BoxGeometry(500,500,500);
+var fondo = new THREE.Mesh(cubo,material);
+escena.add(fondo);
+	
 camara= new THREE.PerspectiveCamera();
 camara.position.z=300;
 camara.lookAt(escena.position);
 
 renderizador= new THREE.WebGLRenderer();
-renderizador.setSize( window.innerHeight*.95, window.innerHeight*.95);
+renderizador.setSize( window.innerWidth,window.innerHeight);
 document.body.appendChild(renderizador.domElement);
 }
 
