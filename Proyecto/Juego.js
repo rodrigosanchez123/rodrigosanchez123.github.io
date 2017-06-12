@@ -77,6 +77,14 @@ var tauro = new THREE.JSONLoader();
 	personaje3.position.set(0,0,40);
 	personaje3.scale.set(4,4,4);
       	escena.add( personaje3 );	});
+	
+var alien = new THREE.JSONLoader();
+     alien.load('https:Personajes/XenoRanger.json',function ( geometry, materials ) {
+     	var material4 = materials[0];
+	var personaje4 = new THREE.Mesh( geometry, material4 );
+	personaje4.position.set(-10,0,30);
+	personaje4.scale.set(4,4,4);
+      	escena.add( personaje4 );	});	
 //Raycaster
    raycaster = new THREE.Raycaster();
 
