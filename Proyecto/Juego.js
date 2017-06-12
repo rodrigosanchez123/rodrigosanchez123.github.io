@@ -74,7 +74,7 @@ var tauro = new THREE.JSONLoader();
      tauro.load('https:Personajes/tauro.json',function ( geometry, materials ) {
      	var material3 = materials[0];
 	var personaje3 = new THREE.Mesh( geometry, material3 );
-	personaje3.position.set(0,0,0);
+	personaje3.position.set(0,0,40);
 	personaje3.scale.set(4,4,4);
       	escena.add( personaje3 );	});
 //Raycaster
