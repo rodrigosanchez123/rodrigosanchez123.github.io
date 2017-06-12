@@ -63,13 +63,20 @@ var Muro = new THREE.Mesh(murogeo,muropiel);
       	escena.add( personaje1 );	});
 	
  var dino = new THREE.JSONLoader();
-     dino.load('https:Personajes/Dinoreno.json',	function ( geometry, materials ) {
+     dino.load('https:Personajes/Dinoreno.json',function ( geometry, materials ) {
      	var material = materials[0];
 	var personaje2 = new THREE.Mesh( geometry, material );
 	personaje2.position.set(50,0,60);
-	personaje2.scale.set(3,3,3);
+	personaje2.scale.set(4,4,4);
       	escena.add( personaje2 );	});
 
+var tauro = new THREE.JSONLoader();
+     tauro.load('https:Personajes/tauro.json',function ( geometry, materials ) {
+     	var material = materials[0];
+	var personaje3 = new THREE.Mesh( geometry, material );
+	personaje3.position.set(50,0,60);
+	personaje3.scale.set(4,4,4);
+      	escena.add( personaje3 );	});
 //Raycaster
    raycaster = new THREE.Raycaster();
 
