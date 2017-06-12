@@ -6,6 +6,7 @@ var textura2 = THREE.ImageUtils.loadTexture('https:Imagenes/Piedra.jpg');
 //LUZ
   iluminacion = new THREE.PointLight(0xFFFFFF);
 	iluminacion.position.set(-100,30,-100);
+	iluminacion..castShadow = true;
 //ESCENA  
   escena = new THREE.Scene();
    escena.add(iluminacion);
@@ -63,7 +64,9 @@ var Muro = new THREE.Mesh(murogeo,muropiel);
 	personaje1 = new THREE.Mesh( geometry, material1 );
 	personaje1.position.set(75,0,75);
 	personaje1.scale.set(3,3,3);
-      	escena.add( personaje1 );	});
+      	personaje1.castShadow = true;
+	escena.add( personaje1 );
+        });
 	
  var dino = new THREE.JSONLoader();
      dino.load('https:Personajes/Dinoreno.json',function ( geometry, materials ) {
@@ -71,6 +74,7 @@ var Muro = new THREE.Mesh(murogeo,muropiel);
 	var personaje2 = new THREE.Mesh( geometry, material2 );
 	personaje2.position.set(50,0,60);
 	personaje2.scale.set(4,4,4);
+	personaje2.castShadow = true;     
       	escena.add( personaje2 );	});
 
 var tauro = new THREE.JSONLoader();
@@ -79,6 +83,7 @@ var tauro = new THREE.JSONLoader();
 	var personaje3 = new THREE.Mesh( geometry, material3 );
 	personaje3.position.set(0,0,40);
 	personaje3.scale.set(4,4,4);
+	personaje3.castShadow = true;
       	escena.add( personaje3 );	});
 	
 var alien = new THREE.JSONLoader();
@@ -87,6 +92,7 @@ var alien = new THREE.JSONLoader();
 	var personaje4 = new THREE.Mesh( geometry, material4 );
 	personaje4.position.set(-10,0,90);
 	personaje4.scale.set(4,4,4);
+	personaje4.castShadow = true;     
       	escena.add( personaje4 );	});	
 	
 var amber = new THREE.JSONLoader();
@@ -95,6 +101,7 @@ var amber = new THREE.JSONLoader();
 	var personaje5 = new THREE.Mesh( geometry, material5 );
 	personaje5.position.set(-50,0,80);
 	personaje5.scale.set(4,4,4);
+	personaje5.castShadow = true;     
       	escena.add( personaje5 );	});
 
 var golem = new THREE.JSONLoader();
@@ -103,6 +110,7 @@ var golem = new THREE.JSONLoader();
 	var personaje6 = new THREE.Mesh( geometry, material6 );
 	personaje6.position.set(-90,18,30);
 	personaje6.scale.set(4,4,4);
+	personaje6.castShadow = true;  
       	escena.add( personaje6 );	});
 //Raycaster
    raycaster = new THREE.Raycaster();
