@@ -61,6 +61,14 @@ var Muro = new THREE.Mesh(murogeo,muropiel);
 	personaje1.position.set(75,0,75);
 	personaje1.scale.set(3,3,3);
       	escena.add( personaje1 );	});
+	
+ var dino = new THREE.JSONLoader();
+     dino.load('https:Personajes/Dinoreno.json',	function ( geometry, materials ) {
+     	var material = materials[0];
+	personaje2 = new THREE.Mesh( geometry, material );
+	personaje2.position.set(50,0,60);
+	personaje2.scale.set(3,3,3);
+      	escena.add( personaje2 );	});
 
 //Raycaster
    raycaster = new THREE.Raycaster();
