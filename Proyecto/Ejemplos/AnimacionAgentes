@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ViajeEstrellas</title>
+    <meta http-equiv="Content-Type"
+              content="text/html; charset=UTF-8">  
+  </head>
+  <body>
+
+  <script   src="three.min.js">
+  </script>
+  
+
+  <script>
+
+// Funcion de movimiento con el teclado
+	function push(e){
+		if (e.keyCode===65)	pos = 1;
+		if (e.keyCode===90)	pos = 2;
+		if (e.keyCode===83)	pos = 3;
+		if (e.keyCode===68)	pos = 4;
+	}
+
+
+
+// Funcion para ajuste de pantalla
+	var listener = function() {
+		camara.aspect = window.innerWidth/window.innerHeight;
+		camara.updateProjectionMatrix();
+		renderer.setSize(window.innerWidth, window.innerHeight);}
+
+
+
+
+
+
+// Declaración de Agente
+	function Agent(x=0, y=0){
+		THREE.Object3D.call(this);
+		this.position.x= x;
+		this.position.y= y;
+	}
+	Agent.prototype = new THREE.Object3D();
+	Agent.prototype.sense= function(environment) {};
+	Agent.prototype.plan= function(environment) {};
+	Agent.prototype.act= function(environment) {};
+
+
+
+
+// Declaración de Entorno
+	function Environment(){
+		THREE.Scene.call(this);}
+	Environment.prototype= new THREE.Scene();
+	Environment.prototype.sense = function(){
+		for(var i=0; i< this.children.length; i++){
+			if (this.children[i].sense !== undefined)
+				this.children[i].sense(this);}}
+	Environment.prototype.plan= function(){
+		for(var i=0; i< this.children.length; i++){
+			if (this.children[i].plan !== undefined)
+				this.children[i].plan(this);}}
+	Environment.prototype.act = function (){
+		for(var i=0; i< this.children.length; i++){
+			if (this.children[i].act !== undefined)
+				this.children[i].act(this);}}
+
+
+
+
+// Declarar un Agente llamado Nave
+	function Nave (r,x=0, y=0){
+		Agent.call(this,x,y);		
+		this.add(new THREE.Mesh(new THREE.SphereGeometry(r),new THREE.MeshNormalMaterial()));			
+		this.step= 1;
+		this.colision=0;
+		this.radius = r;
+		this.sensor1= new THREE.Raycaster( this.position,new THREE.Vector3(0,0,-1));
+	}Nave.prototype= new Agent();
+
+
+
+	Nave.prototype.sense= function(environment){	
+		this.sensor1.set(this.position, new THREE.Vector3(0,0,-1));
+		var obstaculo1= this.sensor1.intersectObjects(environment.children,true);
+
+		if ( (obstaculo1.length >0 && ( obstaculo1[0].distance <=this.radius)))
+			this.colision= 1;
+		else
+			this.colision=0;
+	};
+
+
+	Nave.prototype.act= function(environment) {
+		if (this.colision===1)
+			this.step= 0;
+		else{	if(pos==1)this.position.y += this.step/10;
+			if(pos==2)this.position.y -= this.step/10;
+			if(pos==3)this.position.x -= this.step/10;
+			if(pos==4)this.position.x += this.step/10;
+		}
+		if(this.position.x<-15)	this.step = 0;
+		if(this.position.x>15)	this.step = 0;
+		if(this.position.y>15)	this.step = 0;
+		if(this.position.y<-15)	this.step = 0;
+		this.position.z -= this.step;
+		camara.position.z-=this.step;
+	};
+
+
+
+
+
+// Declarar un Agente llamado Pared
+	function Pared(size, x=0, y=0,z=0){	
+		THREE.Object3D.call(this,x,y,z);
+		this.add(new THREE.Mesh(new THREE.BoxGeometry(size, size, 2),new THREE.MeshNormalMaterial()));
+		this.size= size;
+		this.position.x= x;
+		this.position.y=y;
+		this.position.z=z;
+	}Pared.prototype= new THREE.Object3D();
+
+
+
+// Configuración del programa
+	function setup(){
+		entorno = new Environment();
+		camara = new THREE.PerspectiveCamera();
+		camara.position.z=30;
+
+		for(j = 0; j <25; j++){
+			for(i = 0; i < j/2; i++){
+				entorno.add(new Pared(5,20*(2*Math.random()-1),20*(2*Math.random()-1),(-100*Math.random())-100*j));	
+			}
+		}
+
+		entorno.add(new Nave(1,0,0));
+		entorno.add(camara);
+		renderer = new THREE.WebGLRenderer();
+		renderer.setSize( window.innerHeight*.95,window.innerHeight*.95);
+		document.body.appendChild( renderer.domElement);		
+		var tipoEvento = 'resize';
+		var capturar = false;
+		window.addEventListener( tipoEvento, listener, capturar);
+		window.addEventListener( 'keydown',push, false);
+	}
+
+
+
+
+// Inicio del programa
+
+
+	function loop(){
+		requestAnimationFrame( loop);
+ 		entorno.sense();
+		entorno.plan();
+		entorno.act();
+		renderer.render(entorno, camara);
+	}
+
+
+	
+
+
+
+// Declaración de variables
+	
+	var entorno, camara, renderer;
+	var pos;
+	setup();
+	loop();
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
