@@ -16,6 +16,7 @@ var textura2 = THREE.ImageUtils.loadTexture('https:Imagenes/Piedra.jpg');
  //RENDER
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
+  renderer.shadowMapEnabled = true;
   document.body.appendChild(renderer.domElement);
   //EJES
  var ejes = new THREE.AxisHelper(8);
@@ -41,8 +42,8 @@ var PisoGeometria = new THREE.PlaneGeometry(40,40);
   PisoGeometria.translate(-80+i,0,-80+j);
 var PisoMaterial = new THREE.MeshLambertMaterial({map: textura, side: THREE.DoubleSide});
 var Piso= new THREE.Mesh(PisoGeometria,PisoMaterial);
-  escena.add(Piso);
   Piso.receiveShadow = true;
+  escena.add(Piso);
   }
 }  
             //Pared
@@ -51,6 +52,7 @@ var murogeo = new THREE.BoxGeometry(20,20,3);
    murogeo.translate(-90+i,10,0);
 var muropiel = new THREE.MeshLambertMaterial({map:textura2});
 var Muro = new THREE.Mesh(murogeo,muropiel);
+  Muro.receiveShadow = true;
    escena.add(Muro);
 }
 	
