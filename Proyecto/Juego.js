@@ -19,12 +19,16 @@ var textura2 = THREE.ImageUtils.loadTexture('https:Imagenes/Piedra.jpg');
 //CAMARA
   camara = new THREE.PerspectiveCamera();
   camara.position.set(0,50,50);
-  camara.lookAt(escena.position);	
+  camara.lookAt(escena.position);
+  camara2 = new THREE.PerspectiveCamera();
+  camara2.position.set(10,60,100);
+  camara2.lookAt(escena.position);
  //RENDER
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
   renderer.shadowMapEnabled = true;
   document.body.appendChild(renderer.domElement);
+  renderer.autoClear = false;
   //EJES
  var ejes = new THREE.AxisHelper(8);
  escena.add(ejes);
@@ -130,7 +134,8 @@ var golem = new THREE.JSONLoader();
 
 function loop(){
   controls.update();
-  renderer.render(escena,camara);	
+  //renderer.render(escena,camara);	
+  render();
   requestAnimationFrame(loop);
 }
   
@@ -139,11 +144,31 @@ function pantalla(){
 	camara.updateProjectionMatrix();
 	renderer.setSize(window.innerWidth,window.innerHeight);
 }
+
+function render() 
+{	
+	var SCREEN_WIDTH = window.innerWidth, SCREEN_HEIGHT = window.innerHeight;
+	camara.aspect = 0.5 * SCREEN_WIDTH / SCREEN_HEIGHT;
+	camara2.aspect = 0.5 * SCREEN_WIDTH / SCREEN_HEIGHT;
+	camara.updateProjectionMatrix();
+	camara2.updateProjectionMatrix();
+
+	renderer.setViewport( 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT );
+	renderer.clear();
+	
+	// izquierdo
+	renderer.setViewport( 1, 1,   0.5 * SCREEN_WIDTH - 2, SCREEN_HEIGHT - 2);
+	renderer.render( escena, camara );
+	
+	// derecho
+	renderer.setViewport( 0.5 * SCREEN_WIDTH + 1, 1,   0.5 * SCREEN_WIDTH - 2, SCREEN_HEIGHT - 2 );
+	renderer.render( escena, camara2 );	
+}
 		
 
 
 
-  var iluminacion, escena, camara, renderer;
+  var iluminacion, escena, camara, camara2, renderer;
   var controls, mouse, INTERSECTED, raycaster, personaje1;
   setup();
   loop();
