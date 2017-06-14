@@ -43,12 +43,12 @@ var textura2 = THREE.ImageUtils.loadTexture('https:Imagenes/Piedra.jpg');
         controls.enablePan = false;
         controls.minDistance = 100;
         controls.maxDistance = 300;
-  controls2 = new THREE.OrbitControls( camara2, renderer.domElement );
-	controls2.minPolarAngle = Math.PI/8;
-	controls2.maxPolarAngle = Math.PI / 2;
-        controls2.enablePan = false;
-        controls2.minDistance = 100;
-        controls2.maxDistance = 3 
+  //controls2 = new THREE.OrbitControls( camara2, renderer.domElement );
+	//controls2.minPolarAngle = Math.PI/8;
+	//controls2.maxPolarAngle = Math.PI / 2;
+        //controls2.enablePan = false;
+        //controls2.minDistance = 100;
+        //controls2.maxDistance = 3 
   //Mouse
 	mouse = new THREE.Vector2();
  //Escenario
@@ -175,6 +175,6 @@ function render()
 
 
   var iluminacion, escena, camara, camara2, renderer;
-  var controls, controls2, mouse, INTERSECTED, raycaster, personaje1;
+  var controls, mouse, INTERSECTED, raycaster, personaje1;
   setup();
   loop();
