@@ -201,6 +201,7 @@ function render()
 
 
   var iluminacion, escena, camara, camara2, renderer;
-  var controls, mouse, raycaster, esfera, personaje1;
+  var controls, mouse, esfera, personaje1;
+  var raycaster1, raycaster2, raycaster3, raycaster4, raycaster5, raycaster6;
   setup();
   loop();
