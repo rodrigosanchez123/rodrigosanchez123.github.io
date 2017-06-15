@@ -21,7 +21,7 @@ var textura2 = THREE.ImageUtils.loadTexture('https:Imagenes/Piedra.jpg');
   camara.position.set(0,50,50);
   camara.lookAt(escena.position);
   camara2 = new THREE.PerspectiveCamera();
-  camara2.position.set(10,60,100);
+  camara2.position.set(0,-70,-70);
   camara2.lookAt(escena.position);
  //RENDER
   renderer = new THREE.WebGLRenderer();
@@ -73,7 +73,7 @@ var Muro = new THREE.Mesh(murogeo,muropiel);
 }
 	
  //Personajes 
-esfera = new THREE.Mesh(new THREE.SphereGeometry(10), new THREE.MeshBasicMaterial({color:0xffff00}));
+esfera = new THREE.Mesh(new THREE.SphereGeometry(3), new THREE.MeshBasicMaterial({color:0xffff00}));
 esfera.position.set(30,10,50);
 escena.add(esfera);	
 esfera.castShadow = true;
