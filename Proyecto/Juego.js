@@ -168,13 +168,13 @@ function pantalla(){
 
 function pushar(e){
 if (e.keyCode===119)
-esfera.position.z++;
-else if (e.keyCode===115)
 esfera.position.z--;
+else if (e.keyCode===115)
+esfera.position.z++;
 else if (e.keyCode===97)
-esfera.position.x++;
-else if (e.keyCode===100)
 esfera.position.x--;
+else if (e.keyCode===100)
+esfera.position.x++;
 
 }
 
