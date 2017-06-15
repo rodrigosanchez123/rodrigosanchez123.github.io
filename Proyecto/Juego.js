@@ -78,7 +78,15 @@ esfera.position.set(30,10,50);
 escena.add(esfera);	
 
   var loadergodzilla = new THREE.JSONLoader();
-     loadergodzilla.load('https://rodrigosanchez123.github.io/Proyecto/Personajes/godzilla.json',godzi);
+     loadergodzilla.load('https:Personajes/godzilla.json',function ( geometry, materials ) {
+     	var material1 = materials[0];
+	personaje1 = new THREE.Mesh( geometry, material1 );
+	personaje1.position.set(75,0,75);
+	personaje1.scale.set(3,3,3);
+      	personaje1.castShadow = true;
+	escena.add( personaje1 );
+        }
+);
 	
  var dino = new THREE.JSONLoader();
      dino.load('https:Personajes/Dinoreno.json',function ( geometry, materials ) {
@@ -189,15 +197,6 @@ function render()
 	renderer.render( escena, camara2 );	
 }
 		
-function godzi( geometry, materials ) {
-     	var material1 = materials[0];
-	personaje1 = new THREE.Mesh( geometry, material1 );
-	personaje1.position.set(75,0,75);
-	personaje1.scale.set(3,3,3);
-      	personaje1.castShadow = true;
-	escena.add( personaje1 );
-        }
-
 
   var iluminacion, escena, camara, camara2, renderer;
   var controls, mouse, esfera, personaje1;
