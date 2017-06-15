@@ -76,6 +76,7 @@ var Muro = new THREE.Mesh(murogeo,muropiel);
 esfera = new THREE.Mesh(new THREE.SphereGeometry(10), new THREE.MeshBasicMaterial({color:0xffff00}));
 esfera.position.set(30,10,50);
 escena.add(esfera);	
+esfera.castShadow = true;
 
   var loadergodzilla = new THREE.JSONLoader();
      loadergodzilla.load('https:Personajes/godzilla.json',function ( geometry, materials ) {
