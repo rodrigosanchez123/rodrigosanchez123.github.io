@@ -125,7 +125,7 @@ var golem = new THREE.JSONLoader();
 	personaje6.castShadow = true;  
       	escena.add( personaje6 );	});
 //Raycaster
-   raycaster1 = new THREE.Raycaster(personaje1.position,new THREE.Vector3(0,0,1));
+   raycaster1 = new THREE.Raycaster(personaje1,new THREE.Vector3(0,0,1));
    //raycaster2 = new THREE.Raycaster(personaje2.position,new THREE.Vector3(0,0,1));
    //raycaster3 = new THREE.Raycaster(personaje3.position,new THREE.Vector3(0,0,1));
    //raycaster4 = new THREE.Raycaster(personaje4.position,new THREE.Vector3(0,0,1));
