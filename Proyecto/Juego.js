@@ -49,8 +49,7 @@ var textura2 = THREE.ImageUtils.loadTexture('https:Imagenes/Piedra.jpg');
         //controls2.enablePan = false;
         //controls2.minDistance = 100;
         //controls2.maxDistance = 3 
-  //Mouse
-	mouse = new THREE.Vector2();
+ 
  //Escenario
 for (i=0; i<200; i+=40){
    for (j=0; j<200; j+=40){
@@ -79,14 +78,15 @@ esfera.position.set(30,10,50);
 escena.add(esfera);	
 
   var loadergodzilla = new THREE.JSONLoader();
-     loadergodzilla.load('https://rodrigosanchez123.github.io/Proyecto/Personajes/godzilla.json',	function ( geometry, materials ) {
+     loadergodzilla.load('https://rodrigosanchez123.github.io/Proyecto/Personajes/godzilla.json',function ( geometry, materials ) {
      	var material1 = materials[0];
 	personaje1 = new THREE.Mesh( geometry, material1 );
 	personaje1.position.set(75,0,75);
 	personaje1.scale.set(3,3,3);
       	personaje1.castShadow = true;
-	escena.add( personaje1 );
+	
         });
+escena.add( personaje1 );
 	
  var dino = new THREE.JSONLoader();
      dino.load('https:Personajes/Dinoreno.json',function ( geometry, materials ) {
