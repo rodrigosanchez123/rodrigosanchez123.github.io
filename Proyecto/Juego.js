@@ -18,10 +18,10 @@ var textura2 = THREE.ImageUtils.loadTexture('https:Imagenes/Piedra.jpg');
    escena.add(iluminacion3);
 //CAMARA
   camara = new THREE.PerspectiveCamera();
-  camara.position.set(0,50,100);
+  camara.position.set(0,60,200);
   camara.lookAt(escena.position);
   camara2 = new THREE.PerspectiveCamera();
-  camara2.position.set(0,70,-100);
+  camara2.position.set(0,70,-200);
   camara2.lookAt(escena.position);
  //RENDER
   renderer = new THREE.WebGLRenderer();
@@ -111,7 +111,7 @@ var alien = new THREE.JSONLoader();
      alien.load('https:Personajes/XenoRanger.json',function ( geometry, materials ) {
      	var material4 = materials[0];
 	var personaje4 = new THREE.Mesh( geometry, material4 );
-	personaje4.position.set(-10,0,90);
+	personaje4.position.set(-30,0,60);
 	personaje4.scale.set(4,4,4);
 	personaje4.castShadow = true;     
       	escena.add( personaje4 );	});	
