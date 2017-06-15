@@ -21,7 +21,7 @@ var textura2 = THREE.ImageUtils.loadTexture('https:Imagenes/Piedra.jpg');
   camara.position.set(0,50,50);
   camara.lookAt(escena.position);
   camara2 = new THREE.PerspectiveCamera();
-  camara2.position.set(0,-70,-70);
+  camara2.position.set(0,70,-70);
   camara2.lookAt(escena.position);
  //RENDER
   renderer = new THREE.WebGLRenderer();
