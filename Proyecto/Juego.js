@@ -134,11 +134,11 @@ var golem = new THREE.JSONLoader();
       	escena.add( personaje6 );	});
 //Raycaster
    //raycaster1 = new THREE.Raycaster(personaje1.position,new THREE.Vector3(0,0,1));
-   raycaster2 = new THREE.Raycaster(personaje2.position,new THREE.Vector3(0,0,1));
-   raycaster3 = new THREE.Raycaster(personaje3.position,new THREE.Vector3(0,0,1));
-   raycaster4 = new THREE.Raycaster(personaje4.position,new THREE.Vector3(0,0,1));
-   raycaster5 = new THREE.Raycaster(personaje5.position,new THREE.Vector3(0,0,1));
-   raycaster6 = new THREE.Raycaster(personaje6.position,new THREE.Vector3(0,0,1));
+   //raycaster2 = new THREE.Raycaster(personaje2.position,new THREE.Vector3(0,0,1));
+   //raycaster3 = new THREE.Raycaster(personaje3.position,new THREE.Vector3(0,0,1));
+   //raycaster4 = new THREE.Raycaster(personaje4.position,new THREE.Vector3(0,0,1));
+   //raycaster5 = new THREE.Raycaster(personaje5.position,new THREE.Vector3(0,0,1));
+   //raycaster6 = new THREE.Raycaster(personaje6.position,new THREE.Vector3(0,0,1));
 
   
      // document.addEventListener( 'mousedown', onDocumentMouseDown, false );
