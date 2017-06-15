@@ -84,9 +84,8 @@ escena.add(esfera);
 	personaje1.position.set(75,0,75);
 	personaje1.scale.set(3,3,3);
       	personaje1.castShadow = true;
-	
+	escena.add( personaje1 );
         });
-escena.add( personaje1 );
 	
  var dino = new THREE.JSONLoader();
      dino.load('https:Personajes/Dinoreno.json',function ( geometry, materials ) {
@@ -133,7 +132,7 @@ var golem = new THREE.JSONLoader();
 	personaje6.castShadow = true;  
       	escena.add( personaje6 );	});
 //Raycaster
-   //raycaster1 = new THREE.Raycaster(personaje1.position,new THREE.Vector3(0,0,1));
+   raycaster1 = new THREE.Raycaster(new THREE.Vector3(75,0,75),new THREE.Vector3(0,0,1));
    //raycaster2 = new THREE.Raycaster(personaje2.position,new THREE.Vector3(0,0,1));
    //raycaster3 = new THREE.Raycaster(personaje3.position,new THREE.Vector3(0,0,1));
    //raycaster4 = new THREE.Raycaster(personaje4.position,new THREE.Vector3(0,0,1));
@@ -151,9 +150,9 @@ var golem = new THREE.JSONLoader();
 function loop(){
   controls.update();
   //renderer.render(escena,camara);
-  //var choque1 = raycaster2.intersectObject(esfera);
-   //if(choque1.length > 0 && (choque1[0].distance <= 0.5))
-    //personaje1.position.x+=3;
+  var choque1 = raycaster1.intersectObject(esfera);
+   if(choque1.length > 0 && (choque1[0].distance <= 0.5))
+    personaje1.position.x+=3;
 	
   render();
   requestAnimationFrame(loop);
