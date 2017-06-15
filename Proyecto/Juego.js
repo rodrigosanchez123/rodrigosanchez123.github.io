@@ -145,7 +145,7 @@ function loop(){
   //renderer.render(escena,camara);
   var choque1 = raycaster1.intersectObject(esfera);
    if(choque1.length > 0 && (choque1[0].distance <= 0.5))
-    personaje1.position.x+=3;
+    camara.position.x+=3;
 	
   render();
   requestAnimationFrame(loop);
