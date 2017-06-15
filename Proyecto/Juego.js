@@ -73,7 +73,11 @@ var Muro = new THREE.Mesh(murogeo,muropiel);
    escena.add(Muro);
 }
 	
- //Personajes  
+ //Personajes 
+esfera = new THREE..Mesh(new THREE.SphereGeometry(10), new THREE.MeshBasicMaterial({color:0xffff00}));
+esfera.position.set(30,10,50);
+escena.add(esfera);	
+
   var loadergodzilla = new THREE.JSONLoader();
      loadergodzilla.load('https://rodrigosanchez123.github.io/Proyecto/Personajes/godzilla.json',	function ( geometry, materials ) {
      	var material1 = materials[0];
@@ -135,6 +139,7 @@ var golem = new THREE.JSONLoader();
      // document.addEventListener( 'mousedown', onDocumentMouseDown, false );
      // document.addEventListener( 'mouseup', onDocumentMouseUp, false );
       window.addEventListener( 'resize', pantalla, false );
+      window.addEventListener('keypress',pushar,false);
 
   }
 
@@ -149,6 +154,18 @@ function pantalla(){
 	camara.aspect = window.innerWidth/window.innerHeight;
 	camara.updateProjectionMatrix();
 	renderer.setSize(window.innerWidth,window.innerHeight);
+}
+
+function pushar(e){
+if (e.keyCode===119)
+esfera.position.z++;
+else if (e.keyCode===115)
+esfera.position.z--;
+else if (e.keyCode===97)
+esfera.position.x++;
+else if (e.keyCode===100)
+esfera.position.x--;
+
 }
 
 function render() 
@@ -175,6 +192,6 @@ function render()
 
 
   var iluminacion, escena, camara, camara2, renderer;
-  var controls, mouse, INTERSECTED, raycaster, personaje1;
+  var controls, mouse, raycaster, esfera, personaje1;
   setup();
   loop();
